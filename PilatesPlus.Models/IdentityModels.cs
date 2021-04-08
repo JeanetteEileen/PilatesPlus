@@ -1,4 +1,6 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -28,6 +30,32 @@ namespace PilatesPlus.Data
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+        public DbSet<Client> Clients { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Conventions
+                .Remove<PluralizingTableNameConvention>();
+
+            modelBuilder
+                .Configurations
+                .Add(new IdentityUserLoginConfiguration())
+                .Add(new IdentityUserRolleConfiguration());
+        }
+    }
+    public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
+    {
+        public IdentityUserLoginConfiguration()
+        {
+            HasKey(iul => iul.UserId);
+        }
+    }
+    public class IdentityUserRoleConfiguraiton : EntityTypeConfiguration<IdentityUserRole>
+    {
+        public IdentityUserRoleConfiguraiton()
+        {
+            HasKey(iur => iur.UserId);
         }
     }
 }
