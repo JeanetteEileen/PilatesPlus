@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PilatesPlus.Data
+namespace PilatesPlus.Models
 {
-    public class Client
+    public class ClientCreate
     {
-        [Key]
-        public int clientId { get; set; }
         [Required]
         public string firstName { get; set; }
         [Required]
@@ -19,6 +17,5 @@ namespace PilatesPlus.Data
         public string email { get; set; }
         [Required]
         public string cellPhone { get; set; }
-
     }
 }
