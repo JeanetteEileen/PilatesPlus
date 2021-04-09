@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 
 namespace PilatesPlus.Models
 {
-    public class ClientCreate
+    public class ClientListItem
     {
         [Required]
-        [MinLength(2, ErrorMessage = "Please enter a name of at least 2 characters.")]
+        public int ClientId { get; set; }
         public string FirstName { get; set; }
-        [Required]
-        [MinLength(2, ErrorMessage = "Please enter a name of at least 2 characters.")]
         public string LastName { get; set; }
-        [Required]
         public string Email { get; set; }
-        [Required]
         public string CellPhone { get; set; }
+
+
     }
 }
+    

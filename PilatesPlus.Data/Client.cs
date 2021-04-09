@@ -10,20 +10,20 @@ namespace PilatesPlus.Data
     public class Client
     {
         [Key]
-        public int clientId { get; set; }
+        public int ClientId { get; set; }
         [Required]
         public Guid OwnerId { get; set; }
         [Required]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
         [Required]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
         [Required]
-        public string email { get; set; }
+        public string Email { get; set; }
         [Required]
-        public string cellPhone { get; set; }
+        public string CellPhone { get; set; }
         [Required]
-        public DateTimeOffset createdUtc { get; set; }
-        public DateTimeOffset modifiedUtc { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
+        public DateTimeOffset ModifiedUtc { get; set; }
 
     }
 }
