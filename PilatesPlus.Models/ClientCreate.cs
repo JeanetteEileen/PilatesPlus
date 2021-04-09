@@ -10,8 +10,10 @@ namespace PilatesPlus.Models
     public class ClientCreate
     {
         [Required]
+        [MinLength(2, ErrorMessage = "Please enter a name of at least 2 characters.")]
         public string firstName { get; set; }
         [Required]
+        [MinLength(2, ErrorMessage = "Please enter a name of at least 2 characters.")]
         public string lastName { get; set; }
         [Required]
         public string email { get; set; }

@@ -55,8 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientCreate.cs" />
-    <Compile Include="IdentityModels.cs" />
-    <Compile Include="IdentityUserRolleConfiguration.cs" />
     <Compile Include="PluralizatingTableNameConvention.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

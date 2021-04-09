@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PilatesPlus.Data\PilatesPlus.Data.csproj">
+      <Project>{66CD0BF3-5025-4292-A7C4-28FF3205B69B}</Project>
+      <Name>PilatesPlus.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PilatesPlus.Models\PilatesPlus.Models.csproj">
+      <Project>{3EE906CE-F466-4F95-8987-BD61542D7CE6}</Project>
+      <Name>PilatesPlus.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,7 +41,7 @@ namespace PilatesPlus.Data
             modelBuilder
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
-                .Add(new IdentityUserRolleConfiguration());
+                .Add(new IdentityUserRoleConfiguration());
         }
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
@@ -51,9 +51,9 @@ namespace PilatesPlus.Data
             HasKey(iul => iul.UserId);
         }
     }
-    public class IdentityUserRoleConfiguraiton : EntityTypeConfiguration<IdentityUserRole>
+    public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
     {
-        public IdentityUserRoleConfiguraiton()
+        public IdentityUserRoleConfiguration()
         {
             HasKey(iur => iur.UserId);
         }
