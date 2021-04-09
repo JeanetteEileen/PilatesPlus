@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace PilatesPlus.WebMVC.Controllers
 {
+    [Authorize]
     public class ClientController : Controller
     {
         // GET: Client
@@ -16,8 +17,8 @@ namespace PilatesPlus.WebMVC.Controllers
         {
             var service = CreateClientService();
             var model = service.GetClients();
-
-            return View();
+            //var model = new ClientListItem[0];
+            return View(model);
         }
         // GET: Create
         public ActionResult Create()
@@ -40,7 +41,13 @@ namespace PilatesPlus.WebMVC.Controllers
             ModelState.AddModelError("", "Your client could not be created.");
             return View(model);
         }
+        public ActionResult Details(int id)
+        {
+            var svc = CreateClientService();
+            var model = svc.GetClientById(id);
 
+            return View(model);
+        }
         // GET: helper method
         private ClientService CreateClientService()
         {

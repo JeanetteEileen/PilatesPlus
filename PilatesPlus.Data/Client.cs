@@ -23,7 +23,7 @@ namespace PilatesPlus.Data
         public string CellPhone { get; set; }
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset ModifiedUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
 
     }
 }
