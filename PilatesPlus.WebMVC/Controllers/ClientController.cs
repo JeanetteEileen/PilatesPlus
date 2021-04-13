@@ -41,6 +41,7 @@ namespace PilatesPlus.WebMVC.Controllers
             ModelState.AddModelError("", "Your client could not be created.");
             return View(model);
         }
+        // GET: Details
         public ActionResult Details(int id)
         {
             var svc = CreateClientService();
@@ -48,6 +49,26 @@ namespace PilatesPlus.WebMVC.Controllers
 
             return View(model);
         }
+        // GET: Edit
+        public ActionResult Edit(int id, ClientEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+            return View(model);
+
+            if(model.ClientId != id)
+            {
+                ModelState.AddModelError("", "Given Id and model Id are not matched");
+                return View(model);
+            }
+            var service = CreateClientService();
+            if (service.UpdateClient(model))
+            {
+                TempData["SaveResult"] = "Your client information was updated.";
+                return RedirectToAction("Index");
+            }
+        }
+
+
         // GET: helper method
         private ClientService CreateClientService()
         {
