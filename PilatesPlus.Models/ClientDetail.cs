@@ -21,5 +21,6 @@ namespace PilatesPlus.Models
         public string CellPhone { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public bool ClientActive { get; set; }
     }
 }

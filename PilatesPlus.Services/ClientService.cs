@@ -25,7 +25,8 @@ namespace PilatesPlus.Services
                     LastName = model.LastName,
                     Email = model.Email,
                     CellPhone = model.CellPhone,
-                    CreatedUtc = DateTimeOffset.Now
+                    CreatedUtc = DateTimeOffset.Now,
+                    ClientActive = model.ClientActive
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -49,7 +50,8 @@ namespace PilatesPlus.Services
                                 FirstName = e.FirstName,
                                 LastName = e.LastName,
                                 Email = e.Email,
-                                CellPhone = e.CellPhone
+                                CellPhone = e.CellPhone,
+                                ClientActive = e.ClientActive
                             }
 
                         );
@@ -71,7 +73,8 @@ namespace PilatesPlus.Services
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
                         Email = entity.Email,
-                        CellPhone = entity.CellPhone
+                        CellPhone = entity.CellPhone,
+                        ClientActive = entity.ClientActive
                     };
             }
         }
@@ -88,6 +91,7 @@ namespace PilatesPlus.Services
                 entity.LastName = model.LastName;
                 entity.Email = model.Email;
                 entity.CellPhone = model.CellPhone;
+                entity.ClientActive = model.ClientActive;
 
                 return ctx.SaveChanges() == 1;
             }

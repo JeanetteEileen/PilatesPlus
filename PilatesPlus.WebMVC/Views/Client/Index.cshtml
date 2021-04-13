@@ -37,6 +37,9 @@
             @Html.DisplayNameFor(model => model.CellPhone)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.ClientActive)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </th>
         <th></th>
@@ -44,31 +47,33 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClientId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CellPhone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.ClientId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ClientId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ClientId })
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ClientId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CellPhone)
+    </td>
+    <th>
+        @Html.DisplayFor(modelItem => item.ClientActive)
+    </th>
+    <td>
+        @Html.DisplayFor(modelItem => item.CreatedUtc)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ClientId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ClientId }) |
+    </td>
+</tr>
     }
 
 </table>

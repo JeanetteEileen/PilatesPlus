@@ -27,6 +27,7 @@ namespace PilatesPlus.Data
         [Required(ErrorMessage = "Please enter a valid cell phone number.")]
         [DataType(DataType.PhoneNumber)]
         public string CellPhone { get; set; }
+        public bool ClientActive { get; set; }
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
