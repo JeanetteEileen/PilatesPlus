@@ -17,7 +17,7 @@ namespace PilatesPlus.WebMVC.Controllers
         {
             var service = CreateClientService();
             var model = service.GetClients();
-            //var model = new ClientListItem[0];
+
             return View(model);
         }
         // GET: Create
@@ -49,23 +49,42 @@ namespace PilatesPlus.WebMVC.Controllers
 
             return View(model);
         }
-        // GET: Edit
+        public ActionResult Edit(int id)
+        {
+            var service = CreateClientService();
+            var detail = service.GetClientById(id);
+            var model =
+                new ClientEdit
+                {
+                    ClientId = detail.ClientId,
+                    FirstName = detail.FirstName,
+                    LastName = detail.LastName,
+                    Email = detail.Email,
+                    CellPhone = detail.CellPhone,
+                    ClientActive = detail.ClientActive
+                };
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, ClientEdit model)
         {
             if (!ModelState.IsValid) return View(model);
-            return View(model);
 
-            if(model.ClientId != id)
+            if (model.ClientId != id)
             {
-                ModelState.AddModelError("", "Given Id and model Id are not matched");
+                ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
             }
+
             var service = CreateClientService();
+
             if (service.UpdateClient(model))
             {
-                TempData["SaveResult"] = "Your client information was updated.";
+                TempData["SaveResult"] = "Your client was updated.";
                 return RedirectToAction("Index");
             }
+            return View();
         }
 
 
