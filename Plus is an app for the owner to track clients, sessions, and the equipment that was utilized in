@@ -1,0 +1,45 @@
+[33mcommit 04686dc3d3c5faad3e1cde39a40075a2fad38e96[m
+Author: JenaetteEileen <jeanetteeileen787@gmail.com>
+Date:   Wed Apr 14 12:39:14 2021 -0400
+
+    Add Client to Navbar
+
+[1mdiff --git a/PilatesPlus.WebMVC/Views/Home/About.cshtml b/PilatesPlus.WebMVC/Views/Home/About.cshtml[m
+[1mindex 4b2d9e8..53a9e45 100644[m
+[1m--- a/PilatesPlus.WebMVC/Views/Home/About.cshtml[m
+[1m+++ b/PilatesPlus.WebMVC/Views/Home/About.cshtml[m
+[36m@@ -4,4 +4,7 @@[m
+ <h2>@ViewBag.Title.</h2>[m
+ <h3>@ViewBag.Message</h3>[m
+ [m
+[31m-<p>Use this area to provide additional information.</p>[m
+[32m+[m[32m<p>Pilates Plus is an app for the owner to track clients, sessions, and the equipment that was utilized in[m
+[32m+[m[32m    the session.  The owner can make clients active or inactive depending on what the clients activity is.[m[41m [m
+[32m+[m[32m    In addition, the session can be added so the owner can track what the client's strenghts, concerns or[m
+[32m+[m[32m    injuries are.  The equipment allows the owner to list out the equipment utilized in the sesison.</p>[m
+[1mdiff --git a/PilatesPlus.WebMVC/Views/Home/Index.cshtml b/PilatesPlus.WebMVC/Views/Home/Index.cshtml[m
+[1mindex 4dbf5f1..fc00ada 100644[m
+[1m--- a/PilatesPlus.WebMVC/Views/Home/Index.cshtml[m
+[1m+++ b/PilatesPlus.WebMVC/Views/Home/Index.cshtml[m
+[36m@@ -3,7 +3,7 @@[m
+ }[m
+ [m
+ <div class="jumbotron">[m
+[31m-    <h1>PilatesPlus</h1>[m
+[32m+[m[32m    <h1>Pilates Plus</h1>[m
+     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>[m
+     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>[m
+ </div>[m
+[1mdiff --git a/PilatesPlus.WebMVC/Views/Shared/_Layout.cshtml b/PilatesPlus.WebMVC/Views/Shared/_Layout.cshtml[m
+[1mindex 0bd8ca2..b3fdd29 100644[m
+[1m--- a/PilatesPlus.WebMVC/Views/Shared/_Layout.cshtml[m
+[1m+++ b/PilatesPlus.WebMVC/Views/Shared/_Layout.cshtml[m
+[36m@@ -22,7 +22,7 @@[m
+             <div class="navbar-collapse collapse">[m
+                 <ul class="nav navbar-nav">[m
+                     <li>@Html.ActionLink("Home", "Index", "Home")</li>[m
+[31m-                    <li>@Html.ActionLink("About", "About", "Home")</li>[m
+[32m+[m[32m                    <li>@Html.ActionLink("Client", "Index", "Client")</li>[m
+                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>[m
+                 </ul>[m
+                 @Html.Partial("_LoginPartial")[m
