@@ -12,9 +12,11 @@ namespace PilatesPlus.Models
     {
         [Required]
         [MinLength(2, ErrorMessage = "Please enter a name of at least 2 characters.")]
+        [Display(Name = "Client First Name")]
         public string FirstName { get; set; }
         [Required]
         [MinLength(2, ErrorMessage = "Please enter a name of at least 2 characters.")]
+        [Display(Name = "Client Last Name")]
         public string LastName { get; set; }
         [Display(Name = "Email Address")]
         [Required(ErrorMessage = "The email address is required.")]
