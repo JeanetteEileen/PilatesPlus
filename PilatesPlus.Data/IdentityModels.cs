@@ -32,6 +32,7 @@ namespace PilatesPlus.Data
             return new ApplicationDbContext();
         }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Session> Sessions { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
