@@ -242,6 +242,8 @@
     <Content Include="Views\Client\Edit.cshtml" />
     <Content Include="Views\Session\Index.cshtml" />
     <Content Include="Views\Session\Create.cshtml" />
+    <Content Include="Views\Session\Edit.cshtml" />
+    <Content Include="Views\Session\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
