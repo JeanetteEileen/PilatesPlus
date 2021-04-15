@@ -23,8 +23,8 @@ namespace PilatesPlus.Services
                 {
                     OwnerId = _userId,
                     ClientId = model.ClientId,
-                    FirstName = model.client.FirstName,
-                    LastName = model.client.LastName,
+                    FirstName = model.Client.FirstName,
+                    LastName = model.Client.LastName,
                     SessionDate = model.SessionDate,
                     SessionNote = model.SessionNote,
                     IsDuet = model.IsDuet
@@ -71,7 +71,7 @@ namespace PilatesPlus.Services
                     new SessionDetail
                     {
                         ClientId = entity.ClientId,
-                        FirstName = entity.client.FirstName,
+                        FirstName = entity.Client.FirstName,
                         LastName = entity.LastName,
                         SessionDate = entity.SessionDate,
                         SessionNote = entity.SessionNote,

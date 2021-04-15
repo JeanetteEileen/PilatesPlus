@@ -15,9 +15,9 @@ namespace PilatesPlus.Data
         [Required]
         public Guid OwnerId { get; set; }
         [Required]
-        [ForeignKey(nameof(client))]
+        [ForeignKey(nameof(Client))]
         public int ClientId { get; set; }
-        public virtual Client client { get; set; }
+        public virtual Client Client { get; set; }
         [Display(Name ="First Name")]
         [Required]
         public string FirstName { get; set; }

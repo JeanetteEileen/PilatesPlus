@@ -13,7 +13,7 @@ namespace PilatesPlus.Models
     {
         [ForeignKey(nameof(Client))]
         public int ClientId { get; set; }
-        public virtual Client client { get; set; }
+        public virtual Client Client { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }

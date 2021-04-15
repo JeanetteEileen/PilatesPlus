@@ -35,10 +35,10 @@ namespace PilatesPlus.WebMVC.Controllers
             
             if (service.CreateClient(model))
             {
-                TempData["SaveResult"] = "Your client was created.";
+                TempData["SaveResult"] = "Your Client was created.";
                 return RedirectToAction("Index");
             };
-            ModelState.AddModelError("", "Your client could not be created.");
+            ModelState.AddModelError("", "Your Client could not be created.");
             return View(model);
         }
         // GET: Details
@@ -81,7 +81,7 @@ namespace PilatesPlus.WebMVC.Controllers
 
             if (service.UpdateClient(model))
             {
-                TempData["SaveResult"] = "Your client was updated.";
+                TempData["SaveResult"] = "Your Client was updated.";
                 return RedirectToAction("Index");
             }
             return View();
