@@ -19,10 +19,10 @@ namespace PilatesPlus.Models
         public virtual Client Client { get; set; }
         [Required]
         [Display(Name ="Client First Name")]
-        public int FirstName { get; set; }
+        public string FirstName { get; set; }
         [Required]
         [Display(Name = "Client Last Name")]
-        public int LastName { get; set; }
+        public string LastName { get; set; }
         [Required]
         [Display(Name = "Session Comments")]
         public string SessionNote { get; set; }
