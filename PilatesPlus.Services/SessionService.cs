@@ -61,50 +61,51 @@ namespace PilatesPlus.Services
 
             }
         }
-        public IEnumerable<SessionListItem> GetSessionsByClientId(int ClientId)
+        public SessionDetail GetSessionById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Sessions
+                        .Single(e => e.SessionId == id && e.OwnerId == _userId);
+                return
+                   new SessionDetail
+                   {
+                       SessionId = entity.SessionId,
+                       ClientId = entity.ClientId,
+                       FirstName = entity.FirstName,
+                       LastName = entity.LastName,
+                       SessionDate = entity.SessionDate,
+                       SessionNote = entity.SessionNote,
+                       IsDuet = entity.IsDuet
+                   };
+            }
+        }
+        public IEnumerable<SessionDetail> GetSessionByClientId(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .Sessions
-                        .Where(e => e.ClientId == ClientId && e.OwnerId == _userId)
+                        .Where(e => e.ClientId == id && e.OwnerId == _userId)
                         .Select(
-                            e =>
-                            new SessionListItem
-                            {
-                                ClientId = e.ClientId,
-                                FirstName = e.FirstName,
-                                LastName = e.LastName,              
-                                SessionDate = e.SessionDate,
-                                SessionNote = e.SessionNote,
-                                IsDuet = e.IsDuet
-                            }
-
-                        );
+                                e =>
+                    new SessionDetail
+                    {
+                        SessionId = e.SessionId,
+                        ClientId = e.ClientId,
+                        FirstName = e.FirstName,
+                        LastName = e.LastName,
+                        SessionDate = e.SessionDate,
+                        SessionNote = e.SessionNote,
+                        IsDuet = e.IsDuet
+                    }
+                    );
                 return query.ToArray();
             }
         }
-        //public SessionDetail GetSessionById(int id)
-        //{
-        //    using (var ctx = new ApplicationDbContext())
-        //    {
-        //        var entity =
-        //            ctx
-        //                .Sessions
-        //                .Single(e => e.SessionId == id && e.OwnerId == _userId);
-        //        return
-        //            new SessionDetail
-        //            {
-        //                ClientId = entity.ClientId,
-        //                FirstName = entity.Client.FirstName,
-        //                LastName = entity.LastName,
-        //                SessionDate = entity.SessionDate,
-        //                SessionNote = entity.SessionNote,
-        //                IsDuet = entity.IsDuet
-        //            };
-        //    }
-        //}
         public bool UpdateSession(SessionEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -114,6 +115,7 @@ namespace PilatesPlus.Services
                         .Sessions
                         .Single(e => e.SessionId == model.SessionId && e.OwnerId == _userId);
 
+                entity.ClientId = model.ClientId;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.SessionDate = model.SessionDate;
