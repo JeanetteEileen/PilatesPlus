@@ -35,6 +35,31 @@ namespace PilatesPlus.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public IEnumerable<SessionListItem> GetSessions()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Sessions
+                        .Where(e => e.OwnerId == _userId)
+                        .Select(
+                            e =>
+                            new SessionListItem
+                            {
+                                ClientId = e.ClientId,
+                                FirstName = e.FirstName,
+                                LastName = e.LastName,
+                                SessionDate = e.SessionDate,
+                                SessionNote = e.SessionNote,
+                                IsDuet = e.IsDuet
+                            }
+
+                        );
+                return query.ToArray();
+
+            }
+        }
         public IEnumerable<SessionListItem> GetSessionsByClientId(int ClientId)
         {
             using (var ctx = new ApplicationDbContext())
