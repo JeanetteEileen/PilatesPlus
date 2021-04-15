@@ -23,8 +23,8 @@ namespace PilatesPlus.Services
                 {
                     OwnerId = _userId,
                     ClientId = model.ClientId,
-                    FirstName = model.Client.FirstName,
-                    LastName = model.Client.LastName,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
                     SessionDate = model.SessionDate,
                     SessionNote = model.SessionNote,
                     IsDuet = model.IsDuet
@@ -47,6 +47,7 @@ namespace PilatesPlus.Services
                             e =>
                             new SessionListItem
                             {
+                                SessionId = e.SessionId,
                                 ClientId = e.ClientId,
                                 FirstName = e.FirstName,
                                 LastName = e.LastName,
@@ -84,26 +85,26 @@ namespace PilatesPlus.Services
                 return query.ToArray();
             }
         }
-        public SessionDetail GetSessionById(int id)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                        .Sessions
-                        .Single(e => e.SessionId == id && e.OwnerId == _userId);
-                return
-                    new SessionDetail
-                    {
-                        ClientId = entity.ClientId,
-                        FirstName = entity.Client.FirstName,
-                        LastName = entity.LastName,
-                        SessionDate = entity.SessionDate,
-                        SessionNote = entity.SessionNote,
-                        IsDuet = entity.IsDuet
-                    };
-            }
-        }
+        //public SessionDetail GetSessionById(int id)
+        //{
+        //    using (var ctx = new ApplicationDbContext())
+        //    {
+        //        var entity =
+        //            ctx
+        //                .Sessions
+        //                .Single(e => e.SessionId == id && e.OwnerId == _userId);
+        //        return
+        //            new SessionDetail
+        //            {
+        //                ClientId = entity.ClientId,
+        //                FirstName = entity.Client.FirstName,
+        //                LastName = entity.LastName,
+        //                SessionDate = entity.SessionDate,
+        //                SessionNote = entity.SessionNote,
+        //                IsDuet = entity.IsDuet
+        //            };
+        //    }
+        //}
         public bool UpdateSession(SessionEdit model)
         {
             using (var ctx = new ApplicationDbContext())
