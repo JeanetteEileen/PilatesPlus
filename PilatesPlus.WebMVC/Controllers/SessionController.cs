@@ -38,7 +38,49 @@ namespace PilatesPlus.WebMVC.Controllers
             ModelState.AddModelError("", "Your Session could not be created. Please review your entries.");
             return View(model);
         }
+        public ActionResult Details(int id)
+        {
+            var svc = CreateSessionService();
+            var model = svc.GetSessionById(id);
 
+            return View(model);
+        }
+        public ActionResult Edit(int id)
+        {
+            var service = CreateSessionService();
+            var detail = service.GetSessionById(id);
+            var model =
+                new SessionEdit
+                {
+                    SessionId = detail.SessionId,
+                    ClientId = detail.ClientId,
+                    FirstName = detail.FirstName,
+                    LastName = detail.LastName,
+                    SessionDate = detail.SessionDate,
+                    SessionNote = detail.SessionNote,
+                    IsDuet = detail.IsDuet
+                };
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, SessionEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.SessionId != id)
+            {
+                ModelState.AddModelError("", "Id's mismatched");
+                return View(model);
+            }
+            var service = CreateSessionService();
+            if (service.UpdateSession(model))
+            {
+                TempData["SaveResult"] = "Your Session was updated.";
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
         // GET: helper method
         private SessionService CreateSessionService()
         {
