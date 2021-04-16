@@ -61,6 +61,7 @@
     <Compile Include="ClientDetail.cs" />
     <Compile Include="ClientEdit.cs" />
     <Compile Include="ClientListItem.cs" />
+    <Compile Include="EquipmentCreate.cs" />
     <Compile Include="PluralizatingTableNameConvention.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionCreate.cs" />
