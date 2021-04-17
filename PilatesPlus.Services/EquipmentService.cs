@@ -64,5 +64,29 @@ namespace PilatesPlus.Services
                 return query.ToArray();
             }
         }
+        public EquipmentDetail GetEquipmentById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Equipments
+                    .Single(e => e.EquipmentSessionId == id && e.OwnerId == _userId);
+                return new EquipmentDetail
+                {
+                    EquipmentSessionId = entity.EquipmentSessionId,
+                    ClientId = entity.ClientId,
+                    Reformer = entity.Reformer,
+                    Cadilac = entity.Cadilac,
+                    Mat = entity.Mat,
+                    LadderBarrel = entity.LadderBarrel,
+                    PediPole = entity.PediPole,
+                    MagicCircle = entity.MagicCircle,
+                    SmallBarrel = entity.SmallBarrel,
+                    ToeExerciser = entity.ToeExerciser,
+                    ArmChair = entity.ArmChair,
+                    SpineCorrector = entity.SpineCorrector,
+                    WundaChair = entity.WundaChair
+                };
+            }
+        }
     }
 }
