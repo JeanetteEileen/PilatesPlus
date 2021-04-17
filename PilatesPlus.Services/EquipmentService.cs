@@ -20,7 +20,7 @@ namespace PilatesPlus.Services
             var entity = new Equipment()
             {
                 OwnerId = _userId,
-                SessionId = model.SessionId,
+                EquipmentSessionId = model.EquipmentSessionId,
                 ClientId = model.ClientId,
                 Reformer = model.Reformer,
                 Cadilac = model.Cadilac,
@@ -37,6 +37,31 @@ namespace PilatesPlus.Services
             {
                 ctx.Equipments.Add(entity);
                 return ctx.SaveChanges() == 1;
+            }
+        }
+        public IEnumerable<EquipmentListItem> GetEquipments()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.Equipments.Where(e => e.OwnerId == _userId)
+                    .Select(e => new EquipmentListItem
+                    {
+                        EquipmentSessionId = e.EquipmentSessionId,
+                        ClientId = e.ClientId,
+                        Reformer = e.Reformer,
+                        Cadilac = e.Cadilac,
+                        LadderBarrel = e.LadderBarrel,
+                        MagicCircle = e.MagicCircle,
+                        PediPole = e.PediPole,
+                        ToeExerciser = e.ToeExerciser,
+                        SmallBarrel = e.SmallBarrel,
+                        ArmChair = e.ArmChair,
+                        SpineCorrector = e.SpineCorrector,
+                        WundaChair = e.WundaChair,
+                        CreatedUtc = e.CreatedUtc,
+                        ModifiedUtc = e.ModifiedUtc
+                    });
+                return query.ToArray();
             }
         }
     }
