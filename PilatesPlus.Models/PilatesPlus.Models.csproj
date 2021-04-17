@@ -63,6 +63,7 @@
     <Compile Include="ClientListItem.cs" />
     <Compile Include="EquipmentCreate.cs" />
     <Compile Include="EquipmentDetail.cs" />
+    <Compile Include="EquipmentEdit.cs" />
     <Compile Include="EquipmentListItem.cs" />
     <Compile Include="PluralizatingTableNameConvention.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
