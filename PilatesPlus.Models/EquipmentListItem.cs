@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace PilatesPlus.Models
 {
-    public class EquipmentCreate
+    public class EquipmentListItem
     {
+        [Key]
         [ForeignKey(nameof(Session))]
         public int EquipmentSessionId { get; set; }
         public virtual Session Session { get; set; }
@@ -35,7 +36,9 @@ namespace PilatesPlus.Models
         public bool SpineCorrector { get; set; }
         [Display(Name = "Wunda Chair")]
         public bool WundaChair { get; set; }
-        [Display(Name ="Equipment/Session creation")]
+        [Display(Name = "Equipment/Session creation")]
         public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name ="Equipment/Session modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

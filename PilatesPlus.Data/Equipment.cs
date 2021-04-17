@@ -11,9 +11,8 @@ namespace PilatesPlus.Data
     public class Equipment
     {
         [Key]
-        public int EqiupmentId { get; set; }
         [ForeignKey(nameof(Session))]
-        public int SessionId { get; set; }
+        public int EquipmentSessionId { get; set; }
         public virtual Session Session { get; set; }
         [ForeignKey(nameof(Client))]
         public int ClientId { get; set; }
