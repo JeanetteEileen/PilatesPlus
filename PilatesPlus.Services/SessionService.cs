@@ -125,5 +125,21 @@ namespace PilatesPlus.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeleteSession(int sessionId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Sessions
+                        .Single(e => e.SessionId == sessionId && e.OwnerId == _userId);
+
+                ctx.Sessions.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+
+            }
+
+        }
     }
 }
