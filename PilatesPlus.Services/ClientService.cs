@@ -42,6 +42,7 @@ namespace PilatesPlus.Services
                     ctx
                         .Clients
                         .Where(e => e.OwnerId == _userId)
+                        .OrderBy(e => e.LastName).ThenBy(e => e.FirstName)
                         .Select(
                             e =>
                             new ClientListItem
@@ -51,9 +52,9 @@ namespace PilatesPlus.Services
                                 LastName = e.LastName,
                                 Email = e.Email,
                                 CellPhone = e.CellPhone,
-                                ClientActive = e.ClientActive
-                            }
-
+                                ClientActive = e.ClientActive,
+                                CreatedUtc = e.CreatedUtc
+                            }                          
                         );
                 return query.ToArray();
             }
@@ -74,7 +75,8 @@ namespace PilatesPlus.Services
                         LastName = entity.LastName,
                         Email = entity.Email,
                         CellPhone = entity.CellPhone,
-                        ClientActive = entity.ClientActive
+                        ClientActive = entity.ClientActive,
+                        ModifiedUtc = entity.ModifiedUtc
                     };
             }
         }
@@ -92,9 +94,25 @@ namespace PilatesPlus.Services
                 entity.Email = model.Email;
                 entity.CellPhone = model.CellPhone;
                 entity.ClientActive = model.ClientActive;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }
+        }public bool DeleteClient(int clientId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Clients
+                        .Single(e => e.ClientId == clientId && e.OwnerId == _userId);
+
+                ctx.Clients.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+
+            }
+
         }
     }
 }
