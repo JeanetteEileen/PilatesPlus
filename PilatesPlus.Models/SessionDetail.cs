@@ -23,5 +23,6 @@ namespace PilatesPlus.Models
         public string SessionNote { get; set; }
         [Display(Name ="Is seesion a duet")]
         public bool IsDuet { get; set; }
+        public DateTimeOffset? SessionDateModified { get; set; }
     }
 }
