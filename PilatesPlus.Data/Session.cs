@@ -36,5 +36,7 @@ namespace PilatesPlus.Data
 
         [Display(Name = "Date Session Modified")]
         public DateTimeOffset? SessionDateModified { get; set; }
+        public virtual Equipment EquipmentSession { get; set; }
+
     }
 }
