@@ -42,7 +42,9 @@
         <th>
             @Html.DisplayNameFor(model => model.IsDuet)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.SessionDateModified)
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -68,6 +70,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsDuet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SessionDateModified)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.SessionId }) |
