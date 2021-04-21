@@ -53,7 +53,8 @@ namespace PilatesPlus.Services
                                 LastName = e.LastName,
                                 SessionDate = e.SessionDate,
                                 SessionNote = e.SessionNote,
-                                IsDuet = e.IsDuet
+                                IsDuet = e.IsDuet,
+                                SessionDateModified = e.SessionDateModified
                             }
 
                         );
@@ -78,7 +79,8 @@ namespace PilatesPlus.Services
                        LastName = entity.LastName,
                        SessionDate = entity.SessionDate,
                        SessionNote = entity.SessionNote,
-                       IsDuet = entity.IsDuet
+                       IsDuet = entity.IsDuet,
+                       SessionDateModified = entity.SessionDateModified
                    };
             }
         }
@@ -100,7 +102,8 @@ namespace PilatesPlus.Services
                         LastName = e.LastName,
                         SessionDate = e.SessionDate,
                         SessionNote = e.SessionNote,
-                        IsDuet = e.IsDuet
+                        IsDuet = e.IsDuet,
+                        SessionDateModified = e.SessionDateModified
                     }
                     );
                 return query.ToArray();
@@ -121,6 +124,7 @@ namespace PilatesPlus.Services
                 entity.SessionDate = model.SessionDate;
                 entity.SessionNote = model.SessionNote;
                 entity.IsDuet = model.IsDuet;
+                entity.SessionDateModified = model.SessionDateModified;
 
                 return ctx.SaveChanges() == 1;
             }
