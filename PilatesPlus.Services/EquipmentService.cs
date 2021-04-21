@@ -21,7 +21,7 @@ namespace PilatesPlus.Services
             {
                 OwnerId = _userId,
                 EquipmentSessionId = model.EquipmentSessionId,
-                ClientId = model.ClientId,
+                //ClientId = model.ClientId,
                 Reformer = model.Reformer,
                 Cadilac = model.Cadilac,
                 LadderBarrel = model.LadderBarrel,
@@ -47,9 +47,10 @@ namespace PilatesPlus.Services
                     .Select(e => new EquipmentListItem
                     {
                         EquipmentSessionId = e.EquipmentSessionId,
-                        ClientId = e.ClientId,
+                        ClientId = e.Session.ClientId,
                         Reformer = e.Reformer,
                         Cadilac = e.Cadilac,
+                        Mat = e.Mat,
                         LadderBarrel = e.LadderBarrel,
                         MagicCircle = e.MagicCircle,
                         PediPole = e.PediPole,
@@ -59,7 +60,7 @@ namespace PilatesPlus.Services
                         SpineCorrector = e.SpineCorrector,
                         WundaChair = e.WundaChair,
                         CreatedUtc = e.CreatedUtc,
-                        ModifiedUtc = e.ModifiedUtc
+                        EquipmentSessionModifiedDate = e.EquipmentSessionModifiedDate
                     });
                 return query.ToArray();
             }
@@ -73,7 +74,7 @@ namespace PilatesPlus.Services
                 return new EquipmentDetail
                 {
                     EquipmentSessionId = entity.EquipmentSessionId,
-                    ClientId = entity.ClientId,
+                    ClientId = entity.Session.ClientId,
                     Reformer = entity.Reformer,
                     Cadilac = entity.Cadilac,
                     Mat = entity.Mat,
@@ -87,6 +88,45 @@ namespace PilatesPlus.Services
                     WundaChair = entity.WundaChair
                 };
             }
+        }
+        public bool UpdateEquipment(EquipmentEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Equipments
+                        .Single(e => e.EquipmentSessionId == model.EquipmentSessionId && e.OwnerId == _userId);
+
+                //entity.ClientId = model.ClientId;
+                entity.Reformer = model.Reformer;
+                entity.Cadilac = model.Cadilac;
+                entity.Mat = model.Mat;
+                entity.LadderBarrel = model.LadderBarrel;
+                entity.PediPole = model.PediPole;
+                entity.MagicCircle = model.MagicCircle;
+                entity.SmallBarrel = model.SmallBarrel;
+                entity.ToeExerciser = model.ToeExerciser;
+                entity.ArmChair = model.ArmChair;
+                entity.SpineCorrector = model.SpineCorrector;
+                entity.WundaChair = model.WundaChair;
+                entity.EquipmentSessionModifiedDate = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteEquipment(int equipmentSessionId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                .Equipments
+                .Single(e => e.EquipmentSessionId == equipmentSessionId && e.OwnerId == _userId);
+                ctx.Equipments.Remove(entity);
+                return ctx.SaveChanges() == 1;
+
+            }
+            
         }
     }
 }
