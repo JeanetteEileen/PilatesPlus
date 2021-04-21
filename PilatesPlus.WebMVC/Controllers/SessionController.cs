@@ -58,7 +58,8 @@ namespace PilatesPlus.WebMVC.Controllers
                     LastName = detail.LastName,
                     SessionDate = detail.SessionDate,
                     SessionNote = detail.SessionNote,
-                    IsDuet = detail.IsDuet
+                    IsDuet = detail.IsDuet,
+                    SessionDateModified = detail.SessionDateModified
                 };
             return View(model);
         }
@@ -81,6 +82,24 @@ namespace PilatesPlus.WebMVC.Controllers
             }
             return View();
         }
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateSessionService();
+            var model = svc.GetSessionById(id);
+            return View(model);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteSession(int id)
+        {
+            var service = CreateSessionService();
+            service.DeleteSession(id);
+            TempData["SaveResult"] = "Your Session was deleted";
+            return RedirectToAction("Index");
+        }
+
         // GET: helper method
         private SessionService CreateSessionService()
         {
