@@ -11,12 +11,12 @@ namespace PilatesPlus.Data
     public class Equipment
     {
         [Key]
-        [ForeignKey(nameof(Session))]
+        [ForeignKey("Session")]
         public int EquipmentSessionId { get; set; }
         public virtual Session Session { get; set; }
-        [ForeignKey(nameof(Client))]
-        public int ClientId { get; set; }
-        public virtual Client Client { get; set; }
+        //[ForeignKey(nameof(Client))]
+        //public int ClientId { get; set; }
+        //public virtual Client Client { get; set; }
         [Required]
         public Guid OwnerId { get; set; }
         public bool Reformer { get; set; }
@@ -38,6 +38,6 @@ namespace PilatesPlus.Data
         [Display(Name = "Wunda Chair")]
         public bool WundaChair { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset? ModifiedUtc { get; set; }
+        public DateTimeOffset? EquipmentSessionModifiedDate { get; set; }
     }
 }
