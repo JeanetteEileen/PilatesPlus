@@ -36,9 +36,9 @@ namespace PilatesPlus.Models
         public bool SpineCorrector { get; set; }
         [Display(Name = "Wunda Chair")]
         public bool WundaChair { get; set; }
-        [Display(Name = "Equipment/Session creation")]
+        [Display(Name = "Equipment created")]
         public DateTimeOffset CreatedUtc { get; set; }
-        [Display(Name ="Equipment/Session modified")]
-        public DateTimeOffset? ModifiedUtc { get; set; }
+        [Display(Name ="Equipment modified")]
+        public DateTimeOffset? EquipmentSessionModifiedDate { get; set; }
     }
 }
