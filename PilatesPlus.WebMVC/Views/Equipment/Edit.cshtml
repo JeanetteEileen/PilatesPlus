@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Equipment Edit</h2>
 
 
 @using (Html.BeginForm())
@@ -12,12 +12,10 @@
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>Equipment Edit</h4>
+
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.EquipmentSessionId)
-    @Html.HiddenFor(model => model.ClientId)
-    
 
     <div class="form-group">
         @Html.LabelFor(model => model.Reformer, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -129,7 +127,7 @@
         </div>
     </div>
 
-    
+
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
