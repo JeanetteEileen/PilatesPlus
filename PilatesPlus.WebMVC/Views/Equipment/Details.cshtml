@@ -1,0 +1,138 @@
+﻿@model PilatesPlus.Models.EquipmentDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Equipment Details</h2>
+
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentSessionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentSessionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reformer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reformer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cadilac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cadilac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LadderBarrel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LadderBarrel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PediPole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PediPole)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MagicCircle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagicCircle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SmallBarrel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SmallBarrel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToeExerciser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToeExerciser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArmChair)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArmChair)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpineCorrector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpineCorrector)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WundaChair)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WundaChair)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentSessionModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentSessionModifiedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EquipmentSessionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
