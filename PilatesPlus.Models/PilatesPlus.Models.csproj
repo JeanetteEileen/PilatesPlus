@@ -61,6 +61,8 @@
     <Compile Include="ClientDetail.cs" />
     <Compile Include="ClientEdit.cs" />
     <Compile Include="ClientListItem.cs" />
+    <Compile Include="ClientSessionEquipmentListItem.cs" />
+    <Compile Include="ClientSessionListItem.cs" />
     <Compile Include="EquipmentCreate.cs" />
     <Compile Include="EquipmentDetail.cs" />
     <Compile Include="EquipmentEdit.cs" />
