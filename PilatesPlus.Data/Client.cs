@@ -31,6 +31,8 @@ namespace PilatesPlus.Data
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public virtual List<Session>  ClientSession { get; set; }
+        public virtual List<Equipment> CSEquipment { get; set; }
 
     }
 }
