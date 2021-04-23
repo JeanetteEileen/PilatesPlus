@@ -20,6 +20,7 @@ namespace PilatesPlus.WebMVC.Controllers
 
             return View(model);
         }
+       
         // GET: Create
         public ActionResult Create()
         {
@@ -47,6 +48,20 @@ namespace PilatesPlus.WebMVC.Controllers
             var svc = CreateClientService();
             var model = svc.GetClientById(id);
 
+            return View(model);
+        }
+        [Route("ClientSessions")]
+        public ActionResult ClientSessions(int id)
+        {
+            var svc = CreateClientService();
+            var model = svc.GetSessionsByClientId(id);
+            return View(model);
+
+        }
+        public ActionResult CSEquipmentDetails(int id)
+        {
+            var svc = CreateClientService();
+            var model = svc.GetSessionEquipmentByClientId(id);
             return View(model);
         }
         public ActionResult Edit(int id)

@@ -38,6 +38,14 @@ namespace PilatesPlus.WebMVC.Controllers
             ModelState.AddModelError("", "Your Session could not be created. Please review your entries.");
             return View(model);
         }
+        [Route("ClientSessions")]
+        public ActionResult ClientDetail(int id)
+        {
+            var svc = CreateSessionService();
+            var model = svc.GetSessionsByClientId(id);
+            return View(model);
+
+        }
         public ActionResult Details(int id)
         {
             var svc = CreateSessionService();
@@ -59,7 +67,6 @@ namespace PilatesPlus.WebMVC.Controllers
                     SessionDate = detail.SessionDate,
                     SessionNote = detail.SessionNote,
                     IsDuet = detail.IsDuet,
-                    SessionDateModified = detail.SessionDateModified
                 };
             return View(model);
         }
