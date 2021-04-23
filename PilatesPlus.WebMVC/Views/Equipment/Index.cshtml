@@ -9,109 +9,121 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.EquipmentSessionId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ClientId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reformer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cadilac)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mat)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LadderBarrel)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PediPole)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MagicCircle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SmallBarrel)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ToeExerciser)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArmChair)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SpineCorrector)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WundaChair)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EquipmentSessionModifiedDate)
-        </th>
-        <th></th>
-    </tr>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.EquipmentSessionId)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ClientId)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Reformer)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Cadilac)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Mat)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.LadderBarrel)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.PediPole)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MagicCircle)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.SmallBarrel)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ToeExerciser)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ArmChair)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.SpineCorrector)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.WundaChair)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CreatedUtc)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.EquipmentSessionModifiedDate)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.EquipmentSessionId }) |
-        @Html.ActionLink("Details", "Details", new { id = item.EquipmentSessionId }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.EquipmentSessionId })
-    </td>
-</tr>
-}
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+ }
+    </div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EquipmentSessionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reformer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cadilac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LadderBarrel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PediPole)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MagicCircle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmallBarrel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToeExerciser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmChair)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpineCorrector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WundaChair)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedUtc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EquipmentSessionModifiedDate)
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EquipmentSessionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClientId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Reformer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cadilac)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LadderBarrel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PediPole)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MagicCircle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SmallBarrel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToeExerciser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArmChair)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpineCorrector)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WundaChair)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedUtc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EquipmentSessionModifiedDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EquipmentSessionId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.EquipmentSessionId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EquipmentSessionId })
+                </td>
+            </tr>
+        }
+
+    </table>
