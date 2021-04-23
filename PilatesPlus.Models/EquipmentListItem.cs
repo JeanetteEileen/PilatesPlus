@@ -11,7 +11,7 @@ namespace PilatesPlus.Models
 {
     public class EquipmentListItem
     {
-        [Key]
+       
         [ForeignKey(nameof(Session))]
         public int EquipmentSessionId { get; set; }
         public virtual Session Session { get; set; }

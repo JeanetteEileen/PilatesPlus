@@ -31,7 +31,8 @@ namespace PilatesPlus.Services
                 SmallBarrel = model.SmallBarrel,
                 ArmChair = model.ArmChair,
                 SpineCorrector = model.SpineCorrector,
-                WundaChair = model.WundaChair
+                WundaChair = model.WundaChair,
+                CreatedUtc = DateTimeOffset.Now,
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -85,7 +86,9 @@ namespace PilatesPlus.Services
                     ToeExerciser = entity.ToeExerciser,
                     ArmChair = entity.ArmChair,
                     SpineCorrector = entity.SpineCorrector,
-                    WundaChair = entity.WundaChair
+                    WundaChair = entity.WundaChair,
+                    CreatedUtc = entity.CreatedUtc,
+                    EquipmentSessionModifiedDate = entity.EquipmentSessionModifiedDate
                 };
             }
         }
