@@ -21,7 +21,7 @@ namespace PilatesPlus.Models
         public string CellPhone { get; set; }
         [Display(Name = "Date Client Added")]
         public DateTimeOffset CreatedUtc { get; set; }
-        [Display(Name = "Date Client Modified")]
+        [Display(Name = "Date Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
         [Display(Name = "Is Client Active?")]
         public bool ClientActive { get; set; }
