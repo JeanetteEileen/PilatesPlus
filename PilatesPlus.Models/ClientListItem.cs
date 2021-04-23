@@ -17,13 +17,15 @@ namespace PilatesPlus.Models
         public string LastName { get; set; }
         [Display(Name = "Email Address")]
         public string Email { get; set; }
-        [Display(Name = "Client Phone")]
+        [Display(Name = "Cell Phone")]
         public string CellPhone { get; set; }
-        [Display(Name = "Date Client Added")]
-        public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name = "Is Duet")]
+        public bool IsDuet { get; set; }
         [Display(Name = "Is Client Active?")]
         public bool ClientActive { get; set; }
-
+        [Display(Name ="Date Client Added")]
+        public DateTimeOffset CreatedUtc { get; set; }
+        
+       
     }
 }
-    
