@@ -76,8 +76,67 @@ namespace PilatesPlus.Services
                         Email = entity.Email,
                         CellPhone = entity.CellPhone,
                         ClientActive = entity.ClientActive,
+                        CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
+            }
+        }
+        public IEnumerable<ClientSessionListItem> GetSessionsByClientId(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Sessions
+                       .Where(e => e.ClientId == id && e.OwnerId == _userId)
+                       .OrderBy(e => e.SessionId).ThenBy(e => e.SessionDate)
+                       .Select(e =>
+               new ClientSessionListItem
+               {
+                   SessionId = e.SessionId,
+                   ClientId = e.ClientId,
+                   FirstName = e.FirstName,
+                   LastName = e.LastName,
+                   SessionDate = e.SessionDate,
+                   SessionNote = e.SessionNote,
+                   IsDuet = e.IsDuet,
+                   SessionDateModified = e.SessionDateModified
+               }
+               );
+                return query.ToArray();
+            }
+        }
+        public IEnumerable<ClientSessionEquipmentListItem> GetSessionEquipmentByClientId(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Equipments
+                       .Where(e => e.EquipmentSessionId == id && e.OwnerId == _userId)
+                       .Select(e =>
+               new ClientSessionEquipmentListItem
+               {
+                   SessionId = e.EquipmentSessionId,
+                   ClientId = e.Session.ClientId,
+                   SessionDate = e.Session.SessionDate,
+                   SessionNote = e.Session.SessionNote,
+                   IsDuet = e.Session.IsDuet,
+                   Reformer = e.Reformer,
+                   Cadilac = e.Cadilac,
+                   Mat = e.Mat,
+                   LadderBarrel = e.LadderBarrel,
+                   PediPole = e.PediPole,
+                   MagicCircle = e.MagicCircle,
+                   SmallBarrel = e.SmallBarrel,
+                   ToeExerciser = e.ToeExerciser,
+                   ArmChair = e.ArmChair,
+                   SpineCorrector = e.SpineCorrector,
+                   WundaChair = e.WundaChair,
+                   CreatedUtc = e.CreatedUtc
+               }
+               );
+                return query.ToArray();
             }
         }
         public bool UpdateClient(ClientEdit model)
@@ -94,7 +153,7 @@ namespace PilatesPlus.Services
                 entity.Email = model.Email;
                 entity.CellPhone = model.CellPhone;
                 entity.ClientActive = model.ClientActive;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                entity.ModifiedUtc = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;
             }
