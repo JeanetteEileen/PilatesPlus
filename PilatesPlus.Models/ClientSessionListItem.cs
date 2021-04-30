@@ -16,6 +16,7 @@ namespace PilatesPlus.Models
         public string FirstName { get; set; }
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
+        
         [Display(Name = "Session Id")]
         public int SessionId { get; set; }
         [Display(Name = "Session Date")]
@@ -26,8 +27,6 @@ namespace PilatesPlus.Models
         public string SessionTime { get; set; }
         [Display(Name = "Is Duet")]
         public bool IsDuet { get; set; }
-        [Display(Name = "Is Client Active?")]
-        public bool ClientActive { get; set; }
         public DateTimeOffset? SessionDateModified { get; set; }
         public virtual List<Session> ClientSession { get; set; }
 

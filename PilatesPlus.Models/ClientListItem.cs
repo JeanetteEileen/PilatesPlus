@@ -23,7 +23,7 @@ namespace PilatesPlus.Models
         public bool IsDuet { get; set; }
         [Display(Name = "Is Client Active?")]
         public bool ClientActive { get; set; }
-        [Display(Name ="Date Client Added")]
+        [Display(Name ="Client Added")]
         public DateTimeOffset CreatedUtc { get; set; }
         
        
