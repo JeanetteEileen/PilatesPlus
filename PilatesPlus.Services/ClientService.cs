@@ -89,14 +89,14 @@ namespace PilatesPlus.Services
                     ctx
                         .Sessions
                        .Where(e => e.ClientId == id && e.OwnerId == _userId)
-                       .OrderBy(e => e.SessionId).ThenBy(e => e.SessionDate)
+                       .OrderBy(e => e.SessionDate).ThenBy(e => e.SessionId)
                        .Select(e =>
                new ClientSessionListItem
                {
                    SessionId = e.SessionId,
                    ClientId = e.ClientId,
-                   FirstName = e.FirstName,
-                   LastName = e.LastName,
+                   FirstName = e.Client.FirstName,
+                   LastName = e.Client.LastName,
                    SessionDate = e.SessionDate,
                    SessionNote = e.SessionNote,
                    IsDuet = e.IsDuet,
