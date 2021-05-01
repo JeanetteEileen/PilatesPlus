@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>List of Equipment</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -18,8 +18,8 @@
         </button>
         @TempData["SaveResult"]
     </div>
- }
-    </div>
+}
+<div class="container" id="clientList">
     <table class="table">
         <tr>
             <th>
@@ -127,3 +127,4 @@
         }
 
     </table>
+</div>
