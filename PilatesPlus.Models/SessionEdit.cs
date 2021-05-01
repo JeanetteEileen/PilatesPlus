@@ -15,14 +15,15 @@ namespace PilatesPlus.Models
         public int SessionId { get; set; }
         [Required]
         [ForeignKey(nameof(Client))]
+        [Display(Name ="Client Name")]
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }
-        [Required]
-        [Display(Name = "Client First Name")]
-        public string FirstName { get; set; }
-        [Required]
-        [Display(Name = "Client Last Name")]
-        public string LastName { get; set; }
+        //[Required]
+        //[Display(Name = "Client First Name")]
+        //public string FirstName { get; set; }
+        //[Required]
+        //[Display(Name = "Client Last Name")]
+        //public string LastName { get; set; }
         [Required]
         [Display(Name = "Session Comments")]
         public string SessionNote { get; set; }

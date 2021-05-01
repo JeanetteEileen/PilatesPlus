@@ -18,12 +18,12 @@ namespace PilatesPlus.Data
         [ForeignKey(nameof(Client))]
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }
-        [Display(Name ="First Name")]
-        [Required]
-        public string FirstName { get; set; }
-        [Display(Name = "Last Name")]
-        [Required]
-        public string LastName { get; set; }
+        //[Display(Name ="First Name")]
+        //[Required]
+        //public string FirstName { get; set; }
+        //[Display(Name = "Last Name")]
+        //[Required]
+        //public string LastName { get; set; }
         [Display(Name = "Session Comments")]
         [Required]
         public string SessionNote { get; set; }

@@ -15,7 +15,15 @@ namespace PilatesPlus.Services
         {
             _userId = userId;
         }
-
+        public IEnumerable<Client> GetClientList()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                return ctx.Clients.OrderBy(e => e.LastName)
+                    .ThenBy(e => e.FirstName).ToList();
+            }
+        
+        }
         public bool CreateSession(SessionCreate model)
         {
             var entity =
@@ -23,8 +31,8 @@ namespace PilatesPlus.Services
                 {
                     OwnerId = _userId,
                     ClientId = model.ClientId,
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
+                    //FirstName = model.FirstName,
+                    //LastName = model.LastName,
                     SessionDate = model.SessionDate,
                     SessionNote = model.SessionNote,
                     IsDuet = model.IsDuet
@@ -50,8 +58,8 @@ namespace PilatesPlus.Services
                             {
                                 SessionId = e.SessionId,
                                 ClientId = e.ClientId,
-                                FirstName = e.FirstName,
-                                LastName = e.LastName,
+                                FirstName = e.Client.FirstName,
+                                LastName = e.Client.LastName,
                                 SessionDate = e.SessionDate,
                                 SessionNote = e.SessionNote,
                                 IsDuet = e.IsDuet,
@@ -77,8 +85,8 @@ namespace PilatesPlus.Services
                    {
                        SessionId = entity.SessionId,
                        ClientId = entity.ClientId,
-                       FirstName = entity.FirstName,
-                       LastName = entity.LastName,
+                       FirstName = entity.Client.FirstName,
+                       LastName = entity.Client.LastName,
                        SessionDate = entity.SessionDate,
                        SessionNote = entity.SessionNote,
                        IsDuet = entity.IsDuet,
@@ -100,8 +108,8 @@ namespace PilatesPlus.Services
                {
                    SessionId = e.SessionId,
                    ClientId = e.ClientId,
-                   FirstName = e.FirstName,
-                   LastName = e.LastName,
+                   FirstName = e.Client.FirstName,
+                   LastName = e.Client.LastName,
                    SessionDate = e.SessionDate,
                    SessionNote = e.SessionNote,
                    IsDuet = e.IsDuet,
@@ -121,8 +129,8 @@ namespace PilatesPlus.Services
                         .Single(e => e.SessionId == model.SessionId && e.OwnerId == _userId);
 
                 entity.ClientId = model.ClientId;
-                entity.FirstName = model.FirstName;
-                entity.LastName = model.LastName;
+                //entity.Client.FirstName = model.FirstName;
+                //entity.Client.LastName = model.LastName;
                 entity.SessionDate = model.SessionDate;
                 entity.SessionNote = model.SessionNote;
                 entity.IsDuet = model.IsDuet;

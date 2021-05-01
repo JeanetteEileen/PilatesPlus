@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using PilatesPlus.Data;
 using PilatesPlus.Models;
 using PilatesPlus.Services;
 using System;
@@ -16,12 +17,28 @@ namespace PilatesPlus.WebMVC.Controllers
         {
             var service = CreateSessionService();
             var model = service.GetSessions();
+
+            ViewBag.TotalSessions = model.ToList().Count;
+
             return View(model);
-        }
+        }//GET: Session Create
         public ActionResult Create()
         {
+            
+            var service = CreateSessionService();
+
+            List<Client> clients = service.GetClientList().ToList();
+
+            var query = from c in clients
+                        select new SelectListItem()
+                        {
+                            Value = c.ClientId.ToString(),
+                            Text = c.LastName + " " + c.FirstName
+                        };
+            ViewBag.ClientId = query;
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(SessionCreate model)
@@ -38,14 +55,6 @@ namespace PilatesPlus.WebMVC.Controllers
             ModelState.AddModelError("", "Your Session could not be created. Please review your entries.");
             return View(model);
         }
-        [Route("ClientSessions")]
-        public ActionResult ClientDetail(int id)
-        {
-            var svc = CreateSessionService();
-            var model = svc.GetSessionsByClientId(id);
-            return View(model);
-
-        }
         public ActionResult Details(int id)
         {
             var svc = CreateSessionService();
@@ -55,15 +64,29 @@ namespace PilatesPlus.WebMVC.Controllers
         }
         public ActionResult Edit(int id)
         {
+
             var service = CreateSessionService();
             var detail = service.GetSessionById(id);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var sService = new SessionService(userId);
+
+            List<Client> clients = sService.GetClientList().ToList();
+            ViewBag.ClientId = 
+                clients.Select(c => new SelectListItem()
+                {
+                    Value = c.ClientId.ToString(),
+                    Text = c.LastName + c.FirstName,
+                    Selected = detail.ClientId == c.ClientId
+                }
+                );
             var model =
                 new SessionEdit
                 {
                     SessionId = detail.SessionId,
                     ClientId = detail.ClientId,
-                    FirstName = detail.FirstName,
-                    LastName = detail.LastName,
+                    //FirstName = detail.FirstName,
+                    //LastName = detail.LastName,
                     SessionDate = detail.SessionDate,
                     SessionNote = detail.SessionNote,
                     IsDuet = detail.IsDuet,
