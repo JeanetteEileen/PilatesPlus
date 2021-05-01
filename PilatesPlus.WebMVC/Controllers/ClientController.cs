@@ -48,6 +48,8 @@ namespace PilatesPlus.WebMVC.Controllers
             var svc = CreateClientService();
             var model = svc.GetClientById(id);
 
+            TempData["clientInfo"] = model.ToString();
+
             return View(model);
         }
         [Route("ClientSessions")]

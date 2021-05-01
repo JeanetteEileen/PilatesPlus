@@ -251,7 +251,6 @@
     <Content Include="Views\Equipment\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
     <Content Include="Views\Equipment\Create.cshtml" />
-    <Content Include="Views\Session\ClientDetail.cshtml" />
     <Content Include="Views\Client\ClientSessions.cshtml" />
     <Content Include="Views\Client\Index.cshtml" />
     <Content Include="Views\Client\CSEquipmentDetails.cshtml" />

@@ -15,6 +15,13 @@ namespace PilatesPlus.Services
         {
             _userId = userId;
         }
+        public IEnumerable<Session> GetSessionList()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                return ctx.Sessions.OrderBy(s => s.SessionDate).ThenBy(s =>s.Client.LastName).ThenBy(s => s.Client.FirstName).ToList();
+            }
+        }
         public bool CreateEquipment(EquipmentCreate model)
         {
             var entity = new Equipment()
@@ -40,6 +47,7 @@ namespace PilatesPlus.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
         public IEnumerable<EquipmentListItem> GetEquipments()
         {
             using (var ctx = new ApplicationDbContext())
@@ -48,7 +56,7 @@ namespace PilatesPlus.Services
                     .Select(e => new EquipmentListItem
                     {
                         EquipmentSessionId = e.EquipmentSessionId,
-                        ClientId = e.Session.ClientId,
+                        //ClientId = e.Session.ClientId,
                         Reformer = e.Reformer,
                         Cadilac = e.Cadilac,
                         Mat = e.Mat,

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using PilatesPlus.Data;
 using PilatesPlus.Models;
 using PilatesPlus.Services;
 using System;
@@ -16,10 +17,24 @@ namespace PilatesPlus.WebMVC.Controllers
         {
             var service = CreateEquipmentService();
             var model = service.GetEquipments();
+
             return View(model);
         }
+        // GET: for Equipment Create
         public ActionResult Create()
         {
+            var service = CreateEquipmentService();
+
+            //List<Session> sessions = service.GetSessionList().ToList();
+
+            //ViewBag.EquipmentSessionId
+            //    = sessions.Select(c => new SelectListItem()
+            //    {
+            //        Value = c.SessionId.ToString(),
+            //        Text = c.SessionId + " " + c.Client.LastName + " " + c.SessionDate
+            //    }
+            //    );
+
             return View();
         }
         [HttpPost]
@@ -64,7 +79,7 @@ namespace PilatesPlus.WebMVC.Controllers
                 ArmChair = detail.ArmChair,
                 SpineCorrector = detail.SpineCorrector,
                 WundaChair = detail.WundaChair,
-             
+
             };
             return View(model);
         }

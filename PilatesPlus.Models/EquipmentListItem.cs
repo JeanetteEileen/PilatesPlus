@@ -13,6 +13,7 @@ namespace PilatesPlus.Models
     {
        
         [ForeignKey(nameof(Session))]
+        [Display(Name = "Equipment")]
         public int EquipmentSessionId { get; set; }
         public virtual Session Session { get; set; }
         [ForeignKey(nameof(Client))]
