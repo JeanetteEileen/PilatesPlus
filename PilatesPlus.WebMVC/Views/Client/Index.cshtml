@@ -79,11 +79,18 @@
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.ClientId }) |
                     @Html.ActionLink("Details", "Details", new { id = item.ClientId }) |
-                    @Html.ActionLink("ClientSessions", "ClientSessions", new { id = item.ClientId })
-                    @Html.ActionLink("CreateSession", "Create","Session")
+                    @Html.ActionLink("ClientSessions", "ClientSessions", new { id = item.ClientId }) |
+                    @Html.ActionLink("CreateSession", "Create","Session") 
+                    
                 </td>
             </tr>
+
         }
 
     </table>
+    <div class="row">
+        <div class="col-md-3 offset-md-6">
+            <h2>@Html.ActionLink("Pilates Plus Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</h2>
+        </div>
+    </div>
 </div>
