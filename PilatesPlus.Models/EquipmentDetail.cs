@@ -15,9 +15,9 @@ namespace PilatesPlus.Models
         [Display(Name ="Equipment")]
         public int EquipmentSessionId { get; set; }
         public virtual Session Session { get; set; }
-        [ForeignKey(nameof(Client))]
-        public int ClientId { get; set; }
-        public virtual Client Client { get; set; }
+        //[ForeignKey(nameof(Client))]
+        //public int ClientId { get; set; }
+        //public virtual Client Client { get; set; }
         public bool Reformer { get; set; }
         public bool Cadilac { get; set; }
         public bool Mat { get; set; }
