@@ -29,6 +29,8 @@ namespace PilatesPlus.Data
         public string SessionNote { get; set; }
         [Display(Name = "Session Date")]
         public DateTime SessionDate { get; set; }
+        //[Display(Name = "Time")]
+        //public string SessionTime { get; set; }
         [Display(Name ="Is Session Duet")]
         public bool IsDuet { get; set; }
         [Display(Name = "Date Session Created")]
