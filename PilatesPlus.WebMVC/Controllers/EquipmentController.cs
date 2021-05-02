@@ -25,15 +25,15 @@ namespace PilatesPlus.WebMVC.Controllers
         {
             var service = CreateEquipmentService();
 
-            //List<Session> sessions = service.GetSessionList().ToList();
+            List<Session> sessions = service.GetSessionList().ToList();
 
-            //ViewBag.EquipmentSessionId
-            //    = sessions.Select(c => new SelectListItem()
-            //    {
-            //        Value = c.SessionId.ToString(),
-            //        Text = c.SessionId + " " + c.Client.LastName + " " + c.SessionDate
-            //    }
-            //    );
+            ViewBag.EquipmentSessionId
+                = sessions.Select(c => new SelectListItem()
+                {
+                    Value = c.SessionId.ToString(),
+                    Text = c.SessionId.ToString() + " " + c.Client.LastName + " " + c.SessionDate.ToString()
+                }
+                );
 
             return View();
         }
