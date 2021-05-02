@@ -19,7 +19,7 @@ namespace PilatesPlus.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                return ctx.Sessions.OrderBy(s => s.SessionDate).ThenBy(s =>s.Client.LastName).ThenBy(s => s.Client.FirstName).ToList();
+                return ctx.Sessions.Include("Client").OrderBy(s => s.SessionDate).ThenBy(s =>s.Client.LastName).ThenBy(s => s.Client.FirstName).ToList();
             }
         }
         public bool CreateEquipment(EquipmentCreate model)
@@ -83,7 +83,7 @@ namespace PilatesPlus.Services
                 return new EquipmentDetail
                 {
                     EquipmentSessionId = entity.EquipmentSessionId,
-                    ClientId = entity.Session.ClientId,
+                    //ClientId = entity.Session.ClientId,
                     Reformer = entity.Reformer,
                     Cadilac = entity.Cadilac,
                     Mat = entity.Mat,
