@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="navbar navbar-fixed-top" id="sharedNav">
+    <!--<div class="navbar navbar-fixed-top" id="sharedNav">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -27,13 +27,18 @@
                     <li>@Html.ActionLink("Session", "Index", "Session")</li>
                     <li>@Html.ActionLink("Equipment", "Index", "Equipment")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+                </ul>-->
+              @* @Html.Partial("_LoginPartial")*@
+            <!--</div>
         </div>
-    </div>
+    </div>-->
     <div class="container body-content">
         @RenderBody()
+        <div class="row">
+            <div class="col-md-3 offset-md-6">
+                <h2>@Html.ActionLink("Pilates Plus Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</h2>
+            </div>
+        </div>
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Pilates Plus</p>

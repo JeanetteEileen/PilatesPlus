@@ -114,7 +114,8 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.ClientId }) |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("ClientSessions", "ClientSessions", new { id = item.ClientId }) |
+            @Html.ActionLink("Back to Client List", "Index")
         </td>
     </tr>
 }

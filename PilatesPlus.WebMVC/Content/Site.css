@@ -6,7 +6,7 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    margin-top: 45px;
+    margin-top: 60px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -29,4 +29,14 @@ textarea {
 }
 .body-content{
     background-color:antiquewhite;
+}
+.welcome{
+    background-color: antiquewhite;
+    margin-top: 20px;
+}
+.mymenu{
+    background-color:aquamarine;
+}
+.logoutForm{
+    text-align: center;
 }
