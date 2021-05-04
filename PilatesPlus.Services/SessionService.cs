@@ -34,6 +34,7 @@ namespace PilatesPlus.Services
                     //FirstName = model.FirstName,
                     //LastName = model.LastName,
                     SessionDate = model.SessionDate,
+                    DayOfSession = model.DayOfSession,
                     SessionNote = model.SessionNote,
                     IsDuet = model.IsDuet
                 };
@@ -61,6 +62,7 @@ namespace PilatesPlus.Services
                                 FirstName = e.Client.FirstName,
                                 LastName = e.Client.LastName,
                                 SessionDate = e.SessionDate,
+                                DayOfSession = e.DayOfSession,
                                 SessionNote = e.SessionNote,
                                 IsDuet = e.IsDuet,
                                 SessionDateModified = e.SessionDateModified
@@ -88,6 +90,7 @@ namespace PilatesPlus.Services
                        FirstName = entity.Client.FirstName,
                        LastName = entity.Client.LastName,
                        SessionDate = entity.SessionDate,
+                       DayOfSession = entity.DayOfSession,
                        SessionNote = entity.SessionNote,
                        IsDuet = entity.IsDuet,
                        SessionDateModified = entity.SessionDateModified
@@ -111,6 +114,7 @@ namespace PilatesPlus.Services
                    FirstName = e.Client.FirstName,
                    LastName = e.Client.LastName,
                    SessionDate = e.SessionDate,
+                   DayOfSession = e.DayOfSession,
                    SessionNote = e.SessionNote,
                    IsDuet = e.IsDuet,
                    SessionDateModified = e.SessionDateModified
@@ -132,6 +136,7 @@ namespace PilatesPlus.Services
                 //entity.Client.FirstName = model.FirstName;
                 //entity.Client.LastName = model.LastName;
                 entity.SessionDate = model.SessionDate;
+                entity.DayOfSession = model.DayOfSession;
                 entity.SessionNote = model.SessionNote;
                 entity.IsDuet = model.IsDuet;
                 entity.SessionDateModified = DateTimeOffset.UtcNow;

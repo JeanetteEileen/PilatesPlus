@@ -121,7 +121,9 @@
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.EquipmentSessionId }) |
                     @Html.ActionLink("Details", "Details", new { id = item.EquipmentSessionId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.EquipmentSessionId })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EquipmentSessionId }) |
+                    @Html.ActionLink("Session Index", "Index", "Session") |
+                    @Html.ActionLink("Client Index", "Index", "Client")
                 </td>
             </tr>
         }

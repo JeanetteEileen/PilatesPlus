@@ -1,5 +1,5 @@
 ﻿@model PilatesPlus.Models.SessionEdit
-
+@using PilatesPlus.Data;
 @{
     ViewBag.Title = "Edit";
 }
@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -28,6 +28,13 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SessionNote, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SessionNote, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DayOfSession, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.DayOfSession, new SelectList(Enum.GetValues(typeof(SessionDay))), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DayOfSession, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -49,7 +56,7 @@
             </div>
         </div>
 
-        
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

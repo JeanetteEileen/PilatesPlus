@@ -28,8 +28,8 @@
                     <li>@Html.ActionLink("Equipment", "Index", "Equipment")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>-->
-              @* @Html.Partial("_LoginPartial")*@
-            <!--</div>
+    @* @Html.Partial("_LoginPartial")*@
+    <!--</div>
         </div>
     </div>-->
     <div class="container body-content">
@@ -47,7 +47,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <link rel="stylesheet" type="text/css" href="main.css">
+    @Styles.Render("~/Content/main.css")
     @RenderSection("scripts", required: false)
 </body>
 </html>

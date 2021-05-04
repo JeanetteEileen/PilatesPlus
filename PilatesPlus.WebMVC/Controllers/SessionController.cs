@@ -36,6 +36,7 @@ namespace PilatesPlus.WebMVC.Controllers
                             Text = c.LastName + " " + c.FirstName
                         };
             ViewBag.ClientId = query;
+            
             return View();
         }
 
@@ -89,6 +90,7 @@ namespace PilatesPlus.WebMVC.Controllers
                     //LastName = detail.LastName,
                     SessionDate = detail.SessionDate,
                     SessionNote = detail.SessionNote,
+                    DayOfSession = detail.DayOfSession,
                     IsDuet = detail.IsDuet,
                 };
             return View(model);

@@ -38,6 +38,9 @@
             @Html.DisplayNameFor(model => model.SessionDate)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.DayOfSession)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.SessionNote)
         </th>
         <th>
@@ -50,39 +53,43 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <th>
-                @Html.DisplayFor(modelItem => item.SessionId)
-            </th>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClientId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SessionDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SessionNote)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsDuet)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SessionDateModified)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.SessionId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.SessionId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.SessionId }) |
-                @Html.ActionLink("Create Equipment", "Create", "Equipment") |
-                
-            </td>
-        </tr>
+<tr>
+    <th>
+        @Html.DisplayFor(modelItem => item.SessionId)
+    </th>
+    <td>
+        @Html.DisplayFor(modelItem => item.ClientId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SessionDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DayOfSession)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SessionNote)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IsDuet)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SessionDateModified)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.SessionId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.SessionId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.SessionId }) |
+
+        @Html.ActionLink("Create Equipment", "Create", "Equipment") |
+
+    </td>
+</tr>
     }
 
 </table>

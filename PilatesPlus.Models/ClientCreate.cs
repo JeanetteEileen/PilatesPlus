@@ -28,5 +28,6 @@ namespace PilatesPlus.Models
         [DataType(DataType.PhoneNumber)]
         public string CellPhone { get; set; }
         public bool ClientActive { get; set; }
+
     }
 }

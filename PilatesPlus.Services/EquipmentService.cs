@@ -39,7 +39,7 @@ namespace PilatesPlus.Services
                 ArmChair = model.ArmChair,
                 SpineCorrector = model.SpineCorrector,
                 WundaChair = model.WundaChair,
-                CreatedUtc = DateTimeOffset.Now,
+                CreatedUtc = DateTimeOffset.Now
             };
             using (var ctx = new ApplicationDbContext())
             {

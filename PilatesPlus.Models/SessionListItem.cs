@@ -24,6 +24,8 @@ namespace PilatesPlus.Models
         public string LastName { get; set; }
         [Display(Name = "Session Date")]
         public DateTime SessionDate { get; set; }
+        [Display(Name ="Day of Week")]
+        public SessionDay DayOfSession { get; set; }
         [Display(Name ="Session Notes")]
         public string SessionNote { get; set; }
         [Display(Name ="Is Duet?")]

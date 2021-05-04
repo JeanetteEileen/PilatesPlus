@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:cadetblue;
+    
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -24,19 +24,10 @@ select,
 textarea {
     max-width: 280px;
 }
-#sharedNav{
-    background-color:powderblue;
-}
-.body-content{
-    background-color:antiquewhite;
-}
-.welcome{
-    background-color: antiquewhite;
-    margin-top: 20px;
-}
-.mymenu{
-    background-color:aquamarine;
-}
-.logoutForm{
-    text-align: center;
-}
+
+
+
+
+
+
+

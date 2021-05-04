@@ -1,0 +1,21 @@
+﻿body {
+    background-color: cadetblue;
+}
+.jumbotron{
+    background-color:antiquewhite;
+}
+#button1{
+    width: 150px;
+    background-color:paleturquoise;
+    border:5px;
+}
+#button1:hover{
+    background-color:azure;  
+}
+.body-content{
+    background-color:antiquewhite;
+}
+
+
+
+

@@ -32,6 +32,8 @@ namespace PilatesPlus.Models
         [Required]
         [Display(Name = "Session Date")]
         public DateTime SessionDate { get; set; }
+        [Display(Name ="Day of Week")]
+        public SessionDay DayOfSession { get; set; }
         [Display(Name = "Date Session Modified")]
         public DateTimeOffset? SessionDateModified { get; set; }
 
