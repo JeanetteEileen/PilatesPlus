@@ -120,7 +120,7 @@ namespace PilatesPlus.Services
                    SessionId = e.EquipmentSessionId,
                    ClientId = e.Session.ClientId,
                    SessionDate = e.Session.SessionDate,
-                   SessionNote = e.Session.SessionNote,
+                   //SessionNote = e.Session.SessionNote,
                    IsDuet = e.Session.IsDuet,
                    Reformer = e.Reformer,
                    Cadilac = e.Cadilac,

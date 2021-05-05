@@ -1,9 +1,15 @@
 ﻿body {
     background-color: cadetblue;
 }
-.jumbotron{
-    background-color:antiquewhite;
+h1{
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.landingPage{
+    background-color:antiquewhite;
+    border-radius: 50px;
+}
+
 #button1{
     width: 150px;
     background-color:paleturquoise;
@@ -15,6 +21,7 @@
 .body-content{
     background-color:antiquewhite;
 }
+
 
 
 

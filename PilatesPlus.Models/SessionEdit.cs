@@ -27,7 +27,7 @@ namespace PilatesPlus.Models
         [Required]
         [Display(Name = "Session Comments")]
         public string SessionNote { get; set; }
-        [Display(Name = "Is session duet?")]
+        [Display(Name = "Is Duet?")]
         public bool IsDuet { get; set; }
         [Required]
         [Display(Name = "Session Date")]

@@ -20,7 +20,7 @@ namespace PilatesPlus.WebMVC.Controllers
 
             return View(model);
         }
-       
+        
         // GET: Create
         public ActionResult Create()
         {

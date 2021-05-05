@@ -74,7 +74,10 @@
                     @Html.DisplayFor(modelItem => item.ClientActive)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CreatedUtc)
+                    @{ 
+                        var newDate = item.CreatedUtc.Date.ToShortDateString();
+                    }
+                    @Html.DisplayFor(modelItem => newDate)
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.ClientId }) |

@@ -1,81 +1,83 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<style>
+    h1 {
+        color: blue;
+    }
+</style>
 
 
-<section class="container" id="myJumbotron">
-    <div class="jumbotron">
-        <h1>Welcome to Pilates Plus</h1>
-        <p class="lead"></p>
+<div class="container" id="landingPage">
+    @*<div class="jumbotron">*@
 
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3" style="margin-left: 29%;">
+            <h1>Welcome to Pilates Plus</h1>
+        </div>
+        <div class="col-md-6" style="margin-left: 16.5%;">
+            <h3>@Html.Partial("_LoginPartial")</h3>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        
+
+    @*<p class="lead"></p>
         <p>
             Pilates Plus is an app for the owner to track clients, sessions, and the equipment that was utilized in
             the session.  The owner can make clients active or inactive depending on whether or not the client is currently
             taking classes. Client sessions can be added so the owner can track what the client's strengths, concerns or
             injuries or possible exercises that were used.  The equipment allows the owner to ckeck off which pieces of
             equipment utilized in the sesison.  Before you can start you first need to login.
-        </p>
-        <div class="row">
-            <div class="navbar">
-                <div class="row">
-                    <div class="col-md-5 pull-left col-md-offset-3">
-                        <h3>@Html.Partial("_LoginPartial")</h3>
-                    </div>
-                </div>
-                <hr>
-                <hr>
-                <div class="row">
-                    <div class="col-md-3 col-md-offset-2">
-                        <button type="button" class="btn btn-lg" id="button1">
-                            <h3>@Html.ActionLink(" Clients ", "Index", "Client")</h3>
-                        </button>
+        </p>*@
+    <div class="row">
+        <div class="navbar">
 
-
-                    </div>
-                    <div class="col-md-3">
-                        <button type="button" class="btn btn-lg" id="button1">
-                            <h3>@Html.ActionLink(" Sessions  ", "Index", "Session")</h3>
-                        </button>
-                    </div>
-                    <div class="col-md-3">
-                        <button type="button" class="btn btn-lg" id="button1">
-                            <h3>@Html.ActionLink("  Equipment  ", "Index", "Equipment")</h3>
-                        </button>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end navbar-->
-        </div><!--end row-->
-    </div><!--end jumbotron-->
-</section><!--end container-->
-    
-  
-    
-        
-    
-    
-    
-    
-
-
-
-    @*<div class="col-md-6">
-                <h2>Getting started</h2>
-                <p>
-                    First Clients must be entered. Click on the Client button to add a client or use the Client button at the top of the page.
-                </p>
-                <p><a class="btn btn-default" href="Client">Client Create &raquo;</a></p>
-            </div>
-            <div class="col-md-6">
-                <h2>Add a session</h2>
-                <p>Add a session for your client by clicking on the link or from the Session button at the top of the page.</p>
-                <p><a class="btn btn-default" href="Session">Session Create &raquo;</a></p>
-            </div>
         </div>
+        <hr>
+        <hr>
         <div class="row">
-            <div class="col-md-6 col-md-offset-3" >
-                <h2>Add equipment</h2>
-                <p>Equipment can only be added after a session is created.</p>
-                <p><a class="btn btn-default" href="Equipment">Equipment Create &raquo;</a></p>
-            </div>*@
-</>
+            <div class="col-md-3 col-md-offset-2">
+                <button type="button" class="btn btn-lg" id="button1">
+                    <h3>@Html.ActionLink(" Clients ", "Index", "Client")</h3>
+                </button>
+
+
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-lg" id="button1">
+                    <h3>@Html.ActionLink(" Sessions  ", "Index", "Session")</h3>
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-lg" id="button1">
+                    <h3>@Html.ActionLink("  Equipment  ", "Index", "Equipment")</h3>
+                </button>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end navbar-->
+</div><!--end row-->
+<!--end jumbotron</div>-->
+<!--end container</div>-->
+@*<div class="col-md-6">
+            <h2>Getting started</h2>
+            <p>
+                First Clients must be entered. Click on the Client button to add a client or use the Client button at the top of the page.
+            </p>
+            <p><a class="btn btn-default" href="Client">Client Create &raquo;</a></p>
+        </div>
+        <div class="col-md-6">
+            <h2>Add a session</h2>
+            <p>Add a session for your client by clicking on the link or from the Session button at the top of the page.</p>
+            <p><a class="btn btn-default" href="Session">Session Create &raquo;</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3" >
+            <h2>Add equipment</h2>
+            <p>Equipment can only be added after a session is created.</p>
+            <p><a class="btn btn-default" href="Equipment">Equipment Create &raquo;</a></p>
+        </div>*@
+
 

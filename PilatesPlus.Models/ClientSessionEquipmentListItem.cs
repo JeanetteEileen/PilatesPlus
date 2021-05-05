@@ -15,8 +15,8 @@ namespace PilatesPlus.Models
         public int SessionId { get; set; }
         [Display(Name = "Session Date")]
         public DateTime SessionDate { get; set; }
-        [Display(Name = "Session Notes")]
-        public string SessionNote { get; set; }
+        //[Display(Name = "Session Notes")]
+        //public string SessionNote { get; set; }
         [Display(Name = "Is seesion a duet")]
         public bool IsDuet { get; set; }
         public bool Reformer { get; set; }

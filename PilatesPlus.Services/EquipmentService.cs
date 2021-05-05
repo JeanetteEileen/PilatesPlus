@@ -95,6 +95,7 @@ namespace PilatesPlus.Services
                     ArmChair = entity.ArmChair,
                     SpineCorrector = entity.SpineCorrector,
                     WundaChair = entity.WundaChair,
+                    SessionDate = entity.Session.SessionDate,
                     CreatedUtc = entity.CreatedUtc,
                     EquipmentSessionModifiedDate = entity.EquipmentSessionModifiedDate
                 };
