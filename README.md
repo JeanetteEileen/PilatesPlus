@@ -46,7 +46,7 @@ After the website has been pulled up, create a user login to begin.  Before any 
 5. There are many pieces of equipment that can be utilized in a traditional pilates session.  As a result the user will want to track which equipment was used by the client in the session.  You can either access this from the home page and click on the equipment button or choose the option to create an equipment from the session index.
 6. Choose the equipment that is to be created from the drop down list.  There can only be one list of equipment for each session.  So when you enter the equipment be sure you are adding only one equipment for a session.
 7. The information for the client, session, and equipment can all be edited or viewed individually.  
-8. The ability to delete information is available in the equipment and session areas.  Should you want to delete the information, you must first delete the equipment before trying to delete the session since the equipment can not exist without a session to go with it. After the equipment is deleted, it is safe to delete the session.
+8. The ability to delete information is available in the equipment and session areas though it should be utilized with care.  Once something is deleted from the database it can't be retreived.  Should you want to delete the information, you must first delete the equipment before trying to delete the session since the equipment can not exist without a session to go with it. After the equipment is deleted, it is safe to delete the session.
 9. There is no provision to delete a client.  You do have the ability to make the client inactive but still retain the information about the client.   
 ## Resources
  * Eleven Fifty Academy 
