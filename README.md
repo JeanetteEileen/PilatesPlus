@@ -65,7 +65,9 @@ After the website has been pulled up, create a user login to begin.  Before any 
  * [dbdiagram](https://dbdiagram.io)
  * [W3Schools for HTML, CSS, Bootstrap](https://www.w3schools.com)
  ##Cloning the Site  
- 1. 
+ 1. Go to the GitHub site[JeanetteEileen/PilatesPlus](JeanetteEileen/PilatesPlus)
+ 2. Click on the green button saying "Code".
+ 3. Choose your prefered method to clone the repository.
    
   
 
