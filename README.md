@@ -4,7 +4,7 @@
 * [General information](#general-info)
 * [User Story](#user-story)
 * [Technologies Employed](#technologies-used)
-* Installation and Setup
+* [Installation and Setup](Installation-amdnd-setup)
 * Instructions
 * Resources
 ## General Information  
@@ -29,7 +29,11 @@ during the session. This application allows the the owner to keep track of the c
   * JQUERY
   * LINQ
   * RAZOR
-  * Git
+  * Git  
+ ## Installation and Setup  
+ ### Requirements: Web browser, PilatesPlus.Azurewebsites.net  
+After the website has been pulled up, create a user login to begin.  Before any sessions or equipment can be added, the user needs to establish a list of clients. Click on the Clients button to start entering client information such as first name, last name, email address and phone number.  
+ 
    
   
 
