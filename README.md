@@ -32,6 +32,8 @@ during the session. This application allows the the owner to keep track of the c
   * Git  
  ## Installation and Setup  
  #### Requirements: Web browser, PilatesPlus.Azurewebsites.net  
+ ![Home Page PilatesPlus](![PilatesPlus login page](https://user-images.githubusercontent.com/73566009/117300982-249bca00-ae48-11eb-9a2f-3415881ddd36.png)
+
 After the website has been pulled up, create a user login to begin.  Before any sessions or equipment can be added, the user needs to establish a list of clients.
 1. Click on the Clients button to start entering client information such as first name, last name, email address, Is client active, and phone number.
 2. After the information has been entered click on the create button.  If everything is correct and entered you will be returned to the list of clients and given a message telling you the client has been added to the database.  In the unlikely event the information is not entered correctly you will be prompted to enter the correct information.
