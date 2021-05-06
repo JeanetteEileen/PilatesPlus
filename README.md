@@ -53,8 +53,13 @@ After the website has been pulled up, create a user login to begin.  Before any 
  * [Stack Overflow](https://stackoverflow.com/questions/879852/display-a-view-from-another-controller-in-asp-net-mvc)
  * [Stack Overflow on email validation](https://stackoverflow.com/questions/16712043/email-address-validation-using-asp-net-mvc-data-type-attributes)
  * [twilio blog on validating phone numbers](https://www.twilio.com/blog/validating-phone-numbers-effectively-with-c-and-the-net-frameworks)
- * [Stackoverflow for sorting IEnumerable /</string](https://stackoverflow.com/questions/3630687/how-to-sort-an-ienumerablestring)
- * 
+ * [Stackoverflow for sorting IEnumerable string](https://stackoverflow.com/questions/3630687/how-to-sort-an-ienumerablestring)
+ * [Microsft Build Relationship, navigation properties and foreign keys](https://docs.microsoft.com/en-us/ef/ef6/fundamentals/relationships)
+ * [TutorialTeacher for Views](https://www.tutorialsteacher.com/mvc/tempdata-in-asp.net-mvc)
+ * [TutorialTeach for DropdownListFor](https://www.tutorialsteacher.com/mvc/htmlhelper-dropdownlist-dropdownlistfor) 
+ * [Trello](https://trello.com)
+ * [dbdiagram](https://dbdiagram.io)
+ * [W3Schools for HTML, CSS, Bootstrap](https://www.w3schools.com)
  
    
   
