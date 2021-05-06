@@ -13,7 +13,7 @@ Pilates Plus is an ASP.NET MVC application that allows an individual Pilates Stu
 of the application is an n-tier structured MVC utilizing the Data, Models, Services and WebMVC.  
 ## User Story  
 This project was inspired by the small studio where I study Pilates.  The owner kept hand written notes on what was done in the class and what to do in the future. Notebooks or note cards can be lost but information stored in a database can be kept safe easier.  As a result, this application was designed to allow the owner to keep track of the clients, the sessions or classes they took and which equipment was utilized during the class. PilatesPlus allows the the owner to keep track of the client information in one spot!   
-## Technolgies Employed  
+## Technologies Employed  
  * Visual Studio Community 2019
    * Web API.NET Frammework
    * Individual Authentication
@@ -30,7 +30,7 @@ This project was inspired by the small studio where I study Pilates.  The owner 
   * LINQ
   * RAZOR
   * Git  
- ## Installation and Setup  
+ ## Installation and Setup    
  #### Requirements: Web browser, PilatesPlus from GitHub 
  ![PilatesPlus login page](https://user-images.githubusercontent.com/73566009/117311749-7a756f80-ae52-11eb-9437-5a602bc66833.png)
 
