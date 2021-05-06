@@ -4,7 +4,7 @@
 * [General information](#general-info)
 * [User Story](#user-story)
 * [Technologies Employed](#technologies-employed)
-* [Installation and Setup](Installation-and-setup)
+* [Installation and Setup](#Installation-and-setup)
 * [Instructions](#instructions)
 * [Resources](#resources)
 * [PilatesPlus Creator](#pilatesplus-creator)
