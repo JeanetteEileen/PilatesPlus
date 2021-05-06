@@ -1,4 +1,5 @@
-# PilatesPlus
+# PilatesPlus   
+ Get rid of note cards or an excel spreadsheet.  Put your information in one spot!  
 ## Table of Contents
 * [General Information] (#General-Information)
 * User Story
