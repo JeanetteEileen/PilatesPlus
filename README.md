@@ -3,7 +3,7 @@
 ## Table of Contents
 * [General information](#general-info)
 * [User Story](#user-story)
-* Technologies Employed
+* [Technologies Employed](#technologies-used)
 * Installation and Setup
 * Instructions
 * Resources
@@ -20,10 +20,17 @@ during the session. This application allows the the owner to keep track of the c
    * Identity Framework
    * User Authorization
    * Entity Framework
-   * Web MVC
+   * Web MVC 5
   * Database Mapping using Code-First Approach
   * CSharp - Utilized for Logic 
-  *  
+  * Bootstrap
+  * HTML
+  * CSS
+  * JQUERY
+  * LINQ
+  * RAZOR
+  * Git
+   
   
 
   
