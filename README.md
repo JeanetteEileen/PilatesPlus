@@ -32,7 +32,8 @@ during the session. This application allows the the owner to keep track of the c
   * Git  
  ## Installation and Setup  
  #### Requirements: Web browser, PilatesPlus.Azurewebsites.net  
- ![PilatesPlus login page](https://user-images.githubusercontent.com/73566009/117301245-6f1d4680-ae48-11eb-85c0-6f458b308619.png)
+ ![PilatesPlus login page](https://user-images.githubusercontent.com/73566009/117301389-9b38c780-ae48-11eb-8d4e-0b6f1172c52a.png)
+
 
 
 After the website has been pulled up, create a user login to begin.  Before any sessions or equipment can be added, the user needs to establish a list of clients.
