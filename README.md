@@ -1,6 +1,6 @@
 # PilatesPlus
 ## Table of Contents
-* [General Information] (#GeneralInformation)
+* [General Information]: #GeneralInformation
 * User Story
 * Technologies Employed
 * Installation and Setup
