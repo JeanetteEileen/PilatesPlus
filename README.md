@@ -5,8 +5,8 @@
 * [User Story](#user-story)
 * [Technologies Employed](#technologies-used)
 * [Installation and Setup](Installation-amdnd-setup)
-* Instructions
-* Resources
+* [Instructions](#instructions)
+* [Resources](#resources)
 ## General Information  
 Pilates Plus is an ASP.NET MVC application that allows an individual Pilates Studio owner to Keep track of the clients that frequent the studio. The structure
 of the application is an n-tier structured MVC utilizing the Data, Models, Services and WebMVC.  
@@ -32,7 +32,15 @@ during the session. This application allows the the owner to keep track of the c
   * Git  
  ## Installation and Setup  
  #### Requirements: Web browser, PilatesPlus.Azurewebsites.net  
-After the website has been pulled up, create a user login to begin.  Before any sessions or equipment can be added, the user needs to establish a list of clients. Click on the Clients button to start entering client information such as first name, last name, email address and phone number.  
+After the website has been pulled up, create a user login to begin.  Before any sessions or equipment can be added, the user needs to establish a list of clients.
+1. Click on the Clients button to start entering client information such as first name, last name, email address, Is client active, and phone number.
+2. After the information has been entered click on the create button.  If everything is correct and entered you will be returned to the list of clients and given a message telling you the client has been added to the database.  In the unlikely event the information is not entered correctly you will be prompted to enter the correct information.
+3. The next step after creating a client is to create a session when the client comes in for a class.  This can be done prior to the class or after the class. The user can click on the CreateSession option or go back to the main menu and Select the Session button.
+4. The Create Client Session page you need to start with the dropdown list of Clients to pick the client whose session you which to add.  The Session comments are for what ever the user wants to note about the session. There is an option for noting whether the session is a shared with another client as a duet.  The session date is also added as well as the day of the week drop down.  When all the information has been entered use the create button to add the session.
+5. There are many pieces of equipment that can be utilized in a traditional pilates session.  As a result you will want to track which equipment was used by the client in the session.  You can either access this from the home page and click on the equipment button or choose the option to create an equipment from the session index.
+6. Choose the equipment that is to be created from the drop down list.  There can only be one list of equipment for each session.  So when you enter the equipment be sure you are adding only one equipment for a session.
+7. The information for the client, session, and equipment can all be edited or viewed individually.  
+8. The ability to delete information is available in the equipment and session areas.  Should you want to delete the information, you must first delete the equipment before trying to delete the session since the equipment can not exist without a session to go with it.
  
    
   
