@@ -3,8 +3,8 @@
 ## Table of Contents
 * [General information](#general-info)
 * [User Story](#user-story)
-* [Technologies Employed](#technologies-used)
-* [Installation and Setup](Installation-amdnd-setup)
+* [Technologies Employed](#technologies-employed)
+* [Installation and Setup](Installation-and-setup)
 * [Instructions](#instructions)
 * [Resources](#resources)
 * [PilatesPlus Creator](#pilatesplus-creator)
