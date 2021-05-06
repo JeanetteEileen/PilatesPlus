@@ -15,6 +15,15 @@ This project was inspired by the small studio where I study Pilates.  The owner 
 during the session. This application allows the the owner to keep track of the client information in one spot!   
 ## Technolgies Employed  
  * Visual Studio Community 2019
+   * Web API.NET Frammework
+   * Individual Authentication
+   * Identity Framework
+   * User Authorization
+   * Entity Framework
+   * Web MVC
+  * Database Mapping using Code-First Approach
+  * CSharp - Utilized for Logic 
+  *  
   
 
   
