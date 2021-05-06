@@ -32,7 +32,7 @@ This project was inspired by the small studio where I study Pilates.  The owner 
   * Git  
  ## Installation and Setup  
  #### Requirements: Web browser, PilatesPlus from GitHub 
- 1. Go to the GitHub site [JeanetteEileen/PilatesPlus](JeanetteEileen/PilatesPlus)
+ 1. Go to the GitHub site [JeanetteEileen/PilatesPlus](https://github.com/JeanetteEileen/PilatesPlus)
  2. Click on the green button saying "Code".
  3. Choose your prefered method to clone the repository.  
 ## Instructions  
