@@ -7,7 +7,6 @@
 * [Installation and Setup](Installation-amdnd-setup)
 * [Instructions](#instructions)
 * [Resources](#resources)
-* [Cloning the site](#cloning-the-site)
 * [Contact](#contact)
 ## General Information  
 Pilates Plus is an ASP.NET MVC application that allows an individual Pilates Studio owner to Keep track of the clients that frequent the studio. The structure
@@ -32,20 +31,21 @@ This project was inspired by the small studio where I study Pilates.  The owner 
   * RAZOR
   * Git  
  ## Installation and Setup  
- #### Requirements: Web browser, PilatesPlus.Azurewebsites.net  
- ![PilatesPlus login page](https://user-images.githubusercontent.com/73566009/117301389-9b38c780-ae48-11eb-8d4e-0b6f1172c52a.png)
-
-
+ #### Requirements: Web browser, PilatesPlus from GitHub 
+ 1. Go to the GitHub site [JeanetteEileen/PilatesPlus](JeanetteEileen/PilatesPlus)
+ 2. Click on the green button saying "Code".
+ 3. Choose your prefered method to clone the repository.  
 ## Instructions  
 After the website has been pulled up, create a user login to begin.  Before any sessions or equipment can be added, the user needs to establish a list of clients.
 1. Click on the Clients button to start entering client information such as first name, last name, email address, Is client active, and phone number.
 2. After the information has been entered click on the create button.  If everything is correct and entered you will be returned to the list of clients and given a message telling you the client has been added to the database.  In the unlikely event the information is not entered correctly you will be prompted to enter the correct information.
-3. The next step after creating a client is to create a session when the client comes in for a class.  This can be done prior to the class or after the class. The user can click on the CreateSession option or go back to the main menu and Select the Session button.
-4. The Create Client Session page you need to start with the dropdown list of Clients to pick the client whose session you which to add.  The Session comments are for what ever the user wants to note about the session. There is an option for noting whether the session is a shared with another client as a duet.  The session date is also added as well as the day of the week drop down.  When all the information has been entered use the create button to add the session.
-5. There are many pieces of equipment that can be utilized in a traditional pilates session.  As a result you will want to track which equipment was used by the client in the session.  You can either access this from the home page and click on the equipment button or choose the option to create an equipment from the session index.
+3. The next step after creating a client is to create a session when the client comes in for a class.  This can be done prior to the class or after the class. 
+4. At the Create Client Session page you need to start with the dropdown list of Clients to pick the client whose session you which to add.  The Session comments are for what ever the user wants to note about the session. There is an option for noting whether the session is a shared with another client as a duet and you click on it if it is.  The session date is also added as well as the day of the week from a drop down list.  When all the information has been entered use the create button to add the session.  A noticfication will be given to the user telling them the session was created and the user is returned to the list of sessions.
+5. There are many pieces of equipment that can be utilized in a traditional pilates session.  As a result the user will want to track which equipment was used by the client in the session.  You can either access this from the home page and click on the equipment button or choose the option to create an equipment from the session index.
 6. Choose the equipment that is to be created from the drop down list.  There can only be one list of equipment for each session.  So when you enter the equipment be sure you are adding only one equipment for a session.
 7. The information for the client, session, and equipment can all be edited or viewed individually.  
-8. The ability to delete information is available in the equipment and session areas.  Should you want to delete the information, you must first delete the equipment before trying to delete the session since the equipment can not exist without a session to go with it.  
+8. The ability to delete information is available in the equipment and session areas.  Should you want to delete the information, you must first delete the equipment before trying to delete the session since the equipment can not exist without a session to go with it. After the equipment is deleted, it is safe to delete the session.
+9. There is no provision to delete a client.  You do have the ability to make the client inactive but still retain the information about the client.   
 ## Resources
  * Eleven Fifty Academy 
  * LinkedIn Learning
@@ -64,11 +64,7 @@ After the website has been pulled up, create a user login to begin.  Before any 
  * [TutorialTeach for DropdownListFor](https://www.tutorialsteacher.com/mvc/htmlhelper-dropdownlist-dropdownlistfor) 
  * [Trello](https://trello.com)
  * [dbdiagram](https://dbdiagram.io)
- * [W3Schools for HTML, CSS, Bootstrap](https://www.w3schools.com)
- ## Cloning the Site  
- 1. Go to the GitHub site[JeanetteEileen/PilatesPlus](JeanetteEileen/PilatesPlus)
- 2. Click on the green button saying "Code".
- 3. Choose your prefered method to clone the repository.  
+ * [W3Schools for HTML, CSS, Bootstrap](https://www.w3schools.com) 
  ## Contact
  [Jeanette Schriner](jeanetteeileen787@gmail.com)  
  
