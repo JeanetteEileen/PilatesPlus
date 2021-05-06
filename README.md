@@ -7,7 +7,7 @@
 * [Installation and Setup](Installation-amdnd-setup)
 * [Instructions](#instructions)
 * [Resources](#resources)
-* [Contact](#contact)
+* [PilatesPlus Creator](#pilatesplus-creator)
 ## General Information  
 Pilates Plus is an ASP.NET MVC application that allows an individual Pilates Studio owner to Keep track of the clients that frequent the studio. The structure
 of the application is an n-tier structured MVC utilizing the Data, Models, Services and WebMVC.  
@@ -65,8 +65,8 @@ After the website has been pulled up, create a user login to begin.  Before any 
  * [Trello](https://trello.com)
  * [dbdiagram](https://dbdiagram.io)
  * [W3Schools for HTML, CSS, Bootstrap](https://www.w3schools.com) 
- ## Contact
- [Jeanette Schriner](jeanetteeileen787@gmail.com)  
+ ## PilatesPlus Creator
+ Jeanette Schriner
  
    
    
