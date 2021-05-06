@@ -56,6 +56,7 @@ After the website has been pulled up, create a user login to begin.  Before any 
    * Building Web APIs with ASP.NET Web API 2.2
  * [How to Write Beautiful and Meaninful README.md](https://blog.bitsrc.io/how-to-write-beautiful-and-meaningful-readme-md-for-your-next-project-897045e3f991)
  * [GitHub Markdown Syntax Cheat Sheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+ * [MarkDown Tutorial](https://www.markdowntutorial.com/)
  * [Golden Rules of Documentation](https://docs.google.com/document/d/1RCrukQdGxV4wBL1um4K1U_V8q-0e67OkYoNEZMBp1Mo/edit)
  * [Stack Overflow](https://stackoverflow.com/questions/879852/display-a-view-from-another-controller-in-asp-net-mvc)
  * [Stack Overflow on email validation](https://stackoverflow.com/questions/16712043/email-address-validation-using-asp-net-mvc-data-type-attributes)
