@@ -36,7 +36,7 @@ This project was inspired by the small studio where I study Pilates.  The owner 
 
  1. Go to the GitHub site [JeanetteEileen/PilatesPlus](https://github.com/JeanetteEileen/PilatesPlus)
  2. Click on the green button saying "Code".
- 3. Choose your prefered method to clone the repository.  
+ 3. Choose your prefered method to clone the repository and copy the code.  
 ## Instructions  
 After the website has been pulled up, create a user login to begin.  Before any sessions or equipment can be added, the user needs to establish a list of clients.
 1. Click on the Clients button to start entering client information such as first name, last name, email address, Is client active, and phone number.
