@@ -30,7 +30,7 @@ This project was inspired by the small studio where I study Pilates.  The owner 
   * LINQ
   * RAZOR
   * Git  
- ## Installation and Setup    
+ ## Installation and Setup        
  #### Requirements: Web browser, PilatesPlus from GitHub 
  ![PilatesPlus login page](https://user-images.githubusercontent.com/73566009/117311749-7a756f80-ae52-11eb-9437-5a602bc66833.png)
 
