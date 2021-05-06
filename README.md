@@ -1,5 +1,5 @@
 # PilatesPlus   
- >Get rid of note cards or excel spreadsheets.  Put your client information in one spot!  
+ >Get rid of note cards and excel spreadsheets.  Put your client information in one spot!  
 ## Table of Contents
 * [General information](#general-info)
 * [User Story](#user-story)
