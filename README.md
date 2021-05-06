@@ -2,7 +2,7 @@
  >Get rid of note cards or excel spreadsheets.  Put your client information in one spot!  
 ## Table of Contents
 * [General information](#general-info)
-* User Story
+* [User Story](#user-story)
 * Technologies Employed
 * Installation and Setup
 * Instructions
